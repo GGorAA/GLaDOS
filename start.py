@@ -1,9 +1,3 @@
-"""
-    Setup script for GLaDOS. Checks for updates of the system and enables all needed features and modules.
-    Creator: GGorAA
-    Organisation: Dynamium
-    Version: 1.0beta
-"""
 import os
 import RPi.GPIO as GPIO
 import time
@@ -42,41 +36,3 @@ except:
     print("Error while setting up GPIO ports. Rebooting...")
     time.sleep(1000)
     os.system('/sbin/reboot')
-
-print("Checking for updates...\n")
-try:
-    os.system('sudo apt update')
-    os.system("sudo apt upgrade")
-except:
-    print("Error while checking for updates. Skipping...")
-
-print("Checking and installing missing packages ...")
-try:
-    os.system('sudo apt install libjpeg62-turbo-dev')
-    os.system('sudo apt install cmake')
-except:
-    print("Error while checking for missing packages. Skipping...")
-
-print("Setting up camera stream...")
-try:
-    print('Configuring camera streamer...')
-    os.system('git clone https://github.com/jacksonliam/mjpg-streamer.git ~/mjpg-streamer')
-    os.system('cd ~/mjpg-streamer/mjpg-streamer-experimental')
-    os.system('make clean all')
-    os.system('sudo rm -rf /opt/mjpg-streamer')
-    os.system('sudo mv ~/mjpg-streamer/mjpg-streamer-experimental /opt/mjpg-streamer ')
-    os.system('sudo rm -rf ~/mjpg-streamer')
-except:
-    print('Error while setting up camera streamer. Exiting...')
-
-print("Starting web server...")
-try:
-    os.system('sudo /etc/init.d/nginx start')
-except:
-    print("Error while starting the web server. Exiting...")
-
-print("Starting modules...")
-print("Setup completed. Starting GLaDOS system... ")
-
-os.system('python3 main.py')
-
