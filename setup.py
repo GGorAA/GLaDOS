@@ -8,7 +8,6 @@ import os
 import RPi.GPIO as GPIO
 import time
 
-
 print("#     _____ _           _____   ____   _____                 _                 \n")
 print("#    / ____| |         |  __ \ / __ \ / ____|               | |                \n")
 print("#   | |  __| |     __ _| |  | | |  | | (___    ___ _   _ ___| |_ ___ _ __ ___  \n")
@@ -59,4 +58,5 @@ except:
     os.system('/sbin/reboot')
 
 print("Starting modules...")
+print("Setup completed. Starting ")
 
