@@ -1,5 +1,5 @@
 """
-    Starting script for GLaDOS. Checks for updates of the system and enables all needed features and modules.
+    Setup script for GLaDOS. Checks for updates of the system and enables all needed features and modules.
     Creator: GGorAA
     Organisation: Dynamium
     Version: 1.0beta
@@ -28,6 +28,7 @@ try:
     headTurnServo = 13
     headServo = 15
     headLED = 16
+    print("Setting up pins...")
     GPIO.setMode(GPIO.BOARD)
     GPIO.setup(statusLED, GPIO.OUT)
     GPIO.setup(baseMotor, GPIO.OUT)
@@ -58,5 +59,5 @@ except:
     os.system('/sbin/reboot')
 
 print("Starting modules...")
-print("Setup completed. Starting ")
+print("Setup completed. Starting GLaDOS system... ")
 
