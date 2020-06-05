@@ -22,6 +22,7 @@ print("Starting setup...")
 print("Setting up GPIO ports...\n")
 
 try:
+    print("Assigning variables...\n")
     statusLED = 7
     baseMotor = 11
     bodyServo = 12
@@ -35,12 +36,27 @@ try:
     GPIO.setup(headTurnServo, GPIO.OUT)
     GPIO.setup(headServo, GPIO.OUT)
     GPIO.setup(headLED, GPIO.OUT)
-    print("Ports setup ended with success.")
+    print("GPIO ports setup ended with success.\n")
 except:
     GPIO.cleanup()
     print("Error while setting up GPIO ports. Rebooting...")
     time.sleep(1000)
     os.system('/sbin/reboot')
 
-os.system('sudo apt update')
-os.system('sudo /etc/init.d/nginx start')
+print("Checking for updates...\n")
+try:
+    os.system('sudo apt update')
+    os.system("sudo apt upgrade")
+except:
+    print("Error while checking for updates. Skipping...")
+
+print("Starting web server...")
+try:
+    os.system('sudo /etc/init.d/nginx start')
+except:
+    print("Error while starting the web server. Rebooting...")
+    time.sleep(1000)
+    os.system('/sbin/reboot')
+
+print("Starting modules...")
+
