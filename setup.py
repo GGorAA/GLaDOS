@@ -57,9 +57,8 @@ try:
 except:
     print("Error while checking for missing packages. Skipping...")
 
-print("Setting up camera stream...")
+print("Setting up camera streamer...")
 try:
-    print('Configuring camera streamer...')
     os.system('git clone https://github.com/jacksonliam/mjpg-streamer.git ~/mjpg-streamer')
     os.system('cd ~/mjpg-streamer/mjpg-streamer-experimental')
     os.system('make clean all')
@@ -69,14 +68,4 @@ try:
 except:
     print('Error while setting up camera streamer. Exiting...')
 
-print("Starting web server...")
-try:
-    os.system('sudo /etc/init.d/nginx start')
-except:
-    print("Error while starting the web server. Exiting...")
-
-print("Starting modules...")
-print("Setup completed. Starting GLaDOS system... ")
-
-os.system('python3 main.py')
-
+print("Setup completed. You can now launch GLaDOS system.")

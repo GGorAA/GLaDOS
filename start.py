@@ -36,3 +36,13 @@ except:
     print("Error while setting up GPIO ports. Rebooting...")
     time.sleep(1000)
     os.system('/sbin/reboot')
+
+print("Starting modules...")
+
+print("Starting camera stream...")
+
+print("Starting web server...")
+try:
+    os.system('sudo /etc/init.d/nginx start')
+except:
+    print("Error while starting the web server. Exiting...")
