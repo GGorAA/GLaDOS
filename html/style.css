@@ -1,0 +1,44 @@
+h1.home-header {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin-top: 25px;
+}
+button {
+	padding: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	font-family: 'Montserrat', sans-serif;
+	border: 0px;
+	border-radius: 50px;
+box-shadow:  4px 4px 7px #d9d9d9,
+             -4px -4px 7px #ffffff;
+	transition-duration: 500ms;
+	height: 40px;
+	width: 80px;
+	margin: 5px;
+}
+button:hover {
+background: #ffffff;
+box-shadow:  5px 5px 11px #d9d9d9,
+             -5px -5px 11px #ffffff;
+	transition-duration: 500ms;
+}
+div.home-camera-display {
+  border: 5px solid black;
+  height: 400px;
+  width: 50%;
+}
+h1.controls-heading {
+	font-family: 'Montserrat', sans-serif;
+}
+div.home-controller {
+	width: 50%;
+	text-align: center;
+	position: absolute;
+  right: 0;
+	top: 60px;
+}
+h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
