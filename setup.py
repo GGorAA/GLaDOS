@@ -8,6 +8,7 @@ import os
 import RPi.GPIO as GPIO
 import time
 
+
 print("#     _____ _           _____   ____   _____                 _                 \n")
 print("#    / ____| |         |  __ \ / __ \ / ____|               | |                \n")
 print("#   | |  __| |     __ _| |  | | |  | | (___    ___ _   _ ___| |_ ___ _ __ ___  \n")
@@ -17,6 +18,7 @@ print("#    \_____|______\__,_|_____/ \____/|_____/  |___/\__, |___/\__\___|_| |
 print("#                                                   __/ |                      \n")
 print("#                                                  |___/                       \n")
 print("Version 1.0beta\n")
+print("Starting setup...")
 print("Setting up GPIO ports...\n")
 
 try:
@@ -33,6 +35,7 @@ try:
     GPIO.setup(headTurnServo, GPIO.OUT)
     GPIO.setup(headServo, GPIO.OUT)
     GPIO.setup(headLED, GPIO.OUT)
+    print("Ports setup ended with success.")
 except:
     GPIO.cleanup()
     print("Error while setting up GPIO ports. Rebooting...")
