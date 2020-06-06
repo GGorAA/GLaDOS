@@ -54,6 +54,12 @@ span.home-controller-vars-text {
 	margin: auto;
 	animation: appearFromUp 1.2s ease-in-out;
 }
+div.head-joy {
+    margin-top: -50px;
+}
+div.body-joy {
+    margin-top: -50px;
+}
 h1.controls-heading {
 	font-family: 'Montserrat', sans-serif;
 }
