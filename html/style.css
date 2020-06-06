@@ -56,9 +56,11 @@ span.home-controller-vars-text {
 }
 div.head-joy {
     margin-top: -50px;
+    margin-left: 260px;
 }
 div.body-joy {
     margin-top: -50px;
+    margin-right: 260px;
 }
 h1.controls-heading {
 	font-family: 'Montserrat', sans-serif;
@@ -68,6 +70,7 @@ div.home-controller-camera {
 	text-align: center;
 	float: left;
 	margin: 50px;
+	margin-left: -110px;
 }
 img.home-logo {
     animation: appearFromUp 1s ease-in-out;
@@ -81,6 +84,7 @@ div.home-controller-body {
 	text-align: center;
 	float: right;
 	margin: 50px;
+	margin-right: -110px;
 }
 h1, h2, h3, h4, h5 {
     font-family: 'Montserrat', sans-serif;
