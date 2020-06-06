@@ -14,15 +14,17 @@ import argparse
     Base turn: 1
     Base side tilt: 2
     Base front tilt: 3
-    Arm: 4
+    Arm bend: 4
     Head turn: 5
     Head tilt: 6
     Head LED: 7
     Base LEDs: 8
     
     Modes
-    Add/substract: 1
+    Add/subtract: 1
     Exact number: 2
+    
+    When not specified default is 1.
     
     Number
     If specified mode 1, you need to specify number, which will be used as a angle. e.g. turn one side by 3: control.py --device 4 --mode 1 --number 3. Turn to the opposite side: --number -3.

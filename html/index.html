@@ -16,24 +16,31 @@
         </div>
         <div class="home-controller">
             <div class="home-controller-camera">
-                <h2 class="home-controller-heading">Head controls</h2>
+                <button>LED</button>
                 <div id="headJoy" style="width:200px; height:200px; margin-bottom:20px;"></div>
             </div>
+            <div class="home-controller-logs">
+                <div class="home-controller-vars">
+                    <span class="home-controller-vars-text"><h2>Status variables</h2></span>
+                </div>
+                <div class="home-controller-log">
+
+                </div>
+            </div>
             <div class="home-controller-body">
-                <h2 class="home-controller-heading">Body controls</h2>
-                <button class="home-controller-up">Up</button>
-                <br>
-                <button class="home-controller-left">Left</button>
-                <button class="home-controller-right">Right</button>
-                <br>
-                <button class="home-controller-down">Down</button>
+                <div id="bodyJoy" style="width:200px; height:200px; margin-bottom:20px;"></div>
             </div>
         </div>
     <script type="text/javascript">
+
         // Create JoyStick object into the div 'headJoy'
         var joy = new JoyStick('headJoy');
         // set interval between registering new value
         setInterval(function(){ x.value=joy.GetX(); }, 50);
+
+        // Create JoyStick object into the div 'headJoy'
+        var joy = new JoyStick('bodyJoy');
+
     </script>
 </body>
 </html>
