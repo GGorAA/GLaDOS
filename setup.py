@@ -1,7 +1,7 @@
 """
     Setup script for GLaDOS. Checks for updates of the system and enables all needed features and modules.
+    Name: setup.py
     Creator: GGorAA
-    Organisation: Dynamium
     Version: 1.0beta
 """
 import os
@@ -67,5 +67,8 @@ try:
     os.system('sudo rm -rf ~/mjpg-streamer')
 except:
     print('Error while setting up camera streamer. Exiting...')
+
+print("Installing NGINX server...")
+os.system("sudo apt install nginx")
 
 print("Setup completed. You can now launch GLaDOS system.")
