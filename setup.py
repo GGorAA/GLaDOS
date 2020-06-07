@@ -43,7 +43,7 @@ except:
     time.sleep(1000)
     os.system('/sbin/reboot')
 
-print("Checking for updates...\n")
+print("Installing updates...\n")
 try:
     os.system('sudo apt update')
     os.system("sudo apt upgrade")
@@ -57,7 +57,7 @@ try:
 except:
     print("Error while checking for missing packages. Skipping...")
 
-print("Setting up camera streamer...")
+print("Installing camera streamer...")
 try:
     os.system('git clone https://github.com/jacksonliam/mjpg-streamer.git ~/mjpg-streamer')
     os.system('cd ~/mjpg-streamer/mjpg-streamer-experimental')
@@ -66,9 +66,12 @@ try:
     os.system('sudo mv ~/mjpg-streamer/mjpg-streamer-experimental /opt/mjpg-streamer ')
     os.system('sudo rm -rf ~/mjpg-streamer')
 except:
-    print('Error while setting up camera streamer. Exiting...')
+    print('Error while setting up camera streamer.')
 
 print("Installing NGINX server...")
-os.system("sudo apt install nginx")
+try:
+    os.system("sudo apt install nginx")
+except:
+    print("Failed to install NGINX server.")
 
-print("Setup completed. You can now launch GLaDOS system.")
+print("Setup completed! You can now launch GLaDOS system.")

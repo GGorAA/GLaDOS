@@ -39,7 +39,6 @@ try:
     GPIO.setup(headServo, GPIO.OUT)
     GPIO.setup(headLED, GPIO.OUT)
     """
-    print("GPIO ports setup ended with success.")
 except:
     """
     GPIO.cleanup()
