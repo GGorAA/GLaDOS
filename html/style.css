@@ -47,8 +47,7 @@ span.home-controller-vars-text {
     bottom: 0;
     text-align: center;
 }
-.home-camera-display {
-    display: table-column;
+iframe.home-camera-display {
     border: 5px solid black;
     height: 400px;
     width: 50%;
@@ -56,6 +55,12 @@ span.home-controller-vars-text {
     left: 25%;
     right: 25%;
     animation: appearFromUp 1.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.home-camera-display-outer {
+    display: flex;
 }
 div.head-joy {
     margin-right: 10px;
