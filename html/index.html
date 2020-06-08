@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <link rel="icon" href="favicon.png" type="image/x-icon"/>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link href="ux.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <script src="joy.js"></script>
     <title>GLaDOS Control Panel</title>
 </head>
 <body>
-    <div class="home-wrapper">
+    <div class="home-controller">
         <div class="home-controller-camera">
             <div class="home-controller-camera-buttons">
                 <button class="home-controller-head-up"></button>
@@ -21,6 +20,15 @@
                 <button class="home-controller-head-down"></button>
             </div>
             <div id="headJoy" class="head-joy" style="width:200px; height:200px; margin-bottom:20px;"></div>
+        </div>
+        <iframe class="home-camera-display" src="https://ip.adress:9000" height="480px" width="640px"></iframe>
+        <div class="home-controller-logs">
+            <div class="home-controller-vars">
+                <!-- <span class="home-controller-vars-text"><h2>Status variables</h2></span> -->
+            </div>
+            <div class="home-controller-log">
+
+            </div>
         </div>
         <div class="home-controller-body">
             <div class="home-controller-body-buttons">
@@ -33,7 +41,6 @@
             </div>
             <div id="bodyJoy" class="body-joy" style="width:200px; height:200px; margin-bottom:20px;"></div>
         </div>
-        <iframe class="home-camera-display" src="https://ip.adress:9000" height="480px" width="640px"></iframe>
     </div>
     <img class="home-logo" src="long_logo.png">
     <script type="text/javascript">
@@ -41,12 +48,12 @@
         // Create JoyStick object into the div 'headJoy'
         var headjoy = new JoyStick('headJoy');
         // set interval between registering new value
-        //setInterval(function(){ x.value=headjoy.GetX(); }, 50);
+        setInterval(function(){ x.value=headjoy.GetX(); }, 50);
 
         // Create JoyStick object into the div 'headJoy'
         var bodyjoy = new JoyStick('bodyJoy');
         // set interval between registering new value
-        //setInterval(function(){ x.value=bodyjoy.GetX(); }, 50);
+        setInterval(function(){ x.value=bodyjoy.GetX(); }, 50);
 
     </script>
 </body>

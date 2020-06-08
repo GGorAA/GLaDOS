@@ -8,16 +8,6 @@
         opacity: 1;
     }
 }
-@keyframes appearFromDown {
-    from {
-        transform: translateY(100px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
 
 h1.home-header {
   font-family: 'Montserrat', sans-serif;
@@ -52,28 +42,20 @@ box-shadow:  5px 5px 11px #d9d9d9;
 .home-controller-log {
     max-height: 300px;
 }
-div.home-wrapper {
-    display: flex;
-    height: 100%;
-    width: 100%
-}
 span.home-controller-vars-text {
     position: absolute;
     bottom: 0;
     text-align: center;
 }
-iframe.home-camera-display {
+.home-camera-display {
+    display: table-column;
+    border: 5px solid black;
     height: 400px;
     width: 50%;
     position: absolute;
     left: 25%;
     right: 25%;
-    top: 25%;
-    bottom: 25%;
-    animation: appearFromUp 1.2s ease-out;
-    display: table-row;
-    justify-content: center;
-    align-items: center;
+    animation: appearFromUp 1.2s ease-in-out;
 }
 div.head-joy {
     margin-right: 10px;
@@ -85,14 +67,14 @@ h1.controls-heading {
 	font-family: 'Montserrat', sans-serif;
 }
 div.home-controller-camera {
+    display: table-column;
 	max-width: 25%;
-    left: 0;
-    display: table-row;
 	text-align: center;
+	float: left;
 	margin: 50px;
 }
 img.home-logo {
-    animation: appearFromDown 1s ease-out;
+    animation: appearFromUp 1s ease-in-out;
     height: 130px;
     display: block;
     position: fixed;
@@ -103,10 +85,10 @@ img.home-logo {
     margin-right: auto;
 }
 div.home-controller-body {
-	max-width: 25%;
-    right: 0;
-    display: table-row;
+    display: table-column;
+	max-width: 50%;
 	text-align: center;
+	float: right;
 	margin: 50px;
 }
 h1, h2, h3, h4, h5 {
