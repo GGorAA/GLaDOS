@@ -1,6 +1,6 @@
 # Static settings
 
-# GPIO Pin to which devices are connected
+# GPIO pin to which devices are connected
 baseTurn_GPIO = 11
 baseTiltForward_GPIO = 22
 baseTiltSide_GPIO = 29
@@ -26,10 +26,19 @@ baseTiltForwardState_Default = True
 baseTiltSideState_Default = True
 armBendState_Default = True
 headTurnState_Default = True
+headTiltState_Default = True
+eyeLEDState_Default = True
+baseLEDsState_Default = True
 
 
 # Dynamic settings
 
 # Device state
-baseTurnState_Dynamic = baseTurnState_Default
-baseTiltForwardState_Dynamic = baseTiltForwardState_Default
+baseTurnState = baseTurnState_Default
+baseTiltForwardState = baseTiltForwardState_Default
+baseTiltSideState = baseTiltSideState_Default
+armBendState = armBendState_Default
+headTurnState = headTurnState_Default
+headTiltState = headTiltState_Default
+eyeLEDState = eyeLEDState_Default
+baseLEDsState = baseLEDsState_Default
