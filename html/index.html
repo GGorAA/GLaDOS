@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <link rel="icon" href="favicon.png" type="image/x-icon"/>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="ux.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <script src="joy.js"></script>
     <title>GLaDOS Control Panel</title>
 </head>
 <body>
-    <div class="home-controller">
+    <div class="home-wrapper">
         <div class="home-controller-camera">
             <div class="home-controller-camera-buttons">
                 <button class="home-controller-head-up"></button>
@@ -50,12 +51,12 @@
         // Create JoyStick object into the div 'headJoy'
         var headjoy = new JoyStick('headJoy');
         // set interval between registering new value
-        setInterval(function(){ x.value=headjoy.GetX(); }, 50);
+        //setInterval(function(){ x.value=headjoy.GetX(); }, 50);
 
         // Create JoyStick object into the div 'headJoy'
         var bodyjoy = new JoyStick('bodyJoy');
         // set interval between registering new value
-        setInterval(function(){ x.value=bodyjoy.GetX(); }, 50);
+        //setInterval(function(){ x.value=bodyjoy.GetX(); }, 50);
 
     </script>
 </body>
