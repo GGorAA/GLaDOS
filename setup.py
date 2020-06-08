@@ -8,42 +8,18 @@ import os
 import RPi.GPIO as GPIO
 import time
 
-print("#     _____ _           _____   ____   _____                 _                            _               \n")
-print("#    / ____| |         |  __ \ / __ \ / ____|               | |                          | |              \n")
-print("#   | |  __| |     __ _| |  | | |  | | (___    ___ _   _ ___| |_ ___ _ __ ___    ___  ___| |_ _   _ _ __  \n")
-print("#   | | |_ | |    / _` | |  | | |  | |\___ \  / __| | | / __| __/ _ \ '_ ` _ \  / __|/ _ \ __| | | | '_ \ \n")
-print("#   | |__| | |___| (_| | |__| | |__| |____) | \__ \ |_| \__ \ ||  __/ | | | | | \__ \  __/ |_| |_| | |_) |\n")
-print("#    \_____|______\__,_|_____/ \____/|_____/  |___/\__, |___/\__\___|_| |_| |_| |___/\___|\__|\__,_| .__/ \n")
-print("#                                                   __/ |                                          | |    \n")
-print("#                                                  |___/                                           |_|    \n")
-print("Version 1.0beta\n")
+print("#     _____ _           _____   ____   _____                 _                            _               ")
+print("#    / ____| |         |  __ \ / __ \ / ____|               | |                          | |              ")
+print("#   | |  __| |     __ _| |  | | |  | | (___    ___ _   _ ___| |_ ___ _ __ ___    ___  ___| |_ _   _ _ __  ")
+print("#   | | |_ | |    / _` | |  | | |  | |\___ \  / __| | | / __| __/ _ \ '_ ` _ \  / __|/ _ \ __| | | | '_ \ ")
+print("#   | |__| | |___| (_| | |__| | |__| |____) | \__ \ |_| \__ \ ||  __/ | | | | | \__ \  __/ |_| |_| | |_) |")
+print("#    \_____|______\__,_|_____/ \____/|_____/  |___/\__, |___/\__\___|_| |_| |_| |___/\___|\__|\__,_| .__/ ")
+print("#                                                   __/ |                                          | |    ")
+print("#                                                  |___/                                           |_|    ")
+print("Version 1.0beta")
 print("Starting setup...")
-print("Setting up GPIO ports...\n")
 
-try:
-    print("Assigning variables...\n")
-    statusLED = 7
-    baseMotor = 11
-    bodyServo = 12
-    headTurnServo = 13
-    headServo = 15
-    headLED = 16
-    print("Setting up pins...")
-    GPIO.setMode(GPIO.BOARD)
-    GPIO.setup(statusLED, GPIO.OUT)
-    GPIO.setup(baseMotor, GPIO.OUT)
-    GPIO.setup(bodyServo, GPIO.OUT)
-    GPIO.setup(headTurnServo, GPIO.OUT)
-    GPIO.setup(headServo, GPIO.OUT)
-    GPIO.setup(headLED, GPIO.OUT)
-    print("GPIO ports setup ended with success.\n")
-except:
-    GPIO.cleanup()
-    print("Error while setting up GPIO ports. Rebooting...")
-    time.sleep(1000)
-    os.system('/sbin/reboot')
-
-print("Checking for updates...\n")
+print("Checking for updates...")
 try:
     os.system('sudo apt update')
     os.system("sudo apt upgrade")
