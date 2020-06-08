@@ -19,7 +19,3 @@ This Python project is powering GLaDOS, which is powered by Raspberry Pi.
 
 - NGINX
 - Python
-
-## How does it work
-
-
