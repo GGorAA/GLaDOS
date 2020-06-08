@@ -19,7 +19,7 @@ button {
 	padding-left: 15px;
 	padding-right: 15px;
 	font-family: 'Montserrat', sans-serif;
-	border: 0px;
+	border: 0;
 	border-radius: 50px;
 box-shadow:  4px 4px 7px #d9d9d9;
 	transition-duration: 500ms;
@@ -47,44 +47,54 @@ span.home-controller-vars-text {
     bottom: 0;
     text-align: center;
 }
-.home-camera-display {
+iframe.home-camera-display {
     border: 5px solid black;
     height: 400px;
-    width: 70%;
-	margin: auto;
-	animation: appearFromUp 1.2s ease-in-out;
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    animation: appearFromUp 1.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.home-camera-display-outer {
+    display: flex;
 }
 div.head-joy {
-    margin-top: -50px;
-    margin-left: 260px;
+    margin-right: 10px;
 }
 div.body-joy {
-    margin-top: -50px;
-    margin-right: 260px;
+    margin-left: 10px;
 }
 h1.controls-heading {
 	font-family: 'Montserrat', sans-serif;
 }
 div.home-controller-camera {
-	max-width: 50%;
+    display: table-column;
+	max-width: 25%;
 	text-align: center;
 	float: left;
 	margin: 50px;
-	margin-left: -110px;
 }
 img.home-logo {
     animation: appearFromUp 1s ease-in-out;
     height: 130px;
     display: block;
+    position: fixed;
+    bottom: 0;
+    left: 25%;
+    right: 25%;
     margin-left: auto;
     margin-right: auto;
 }
 div.home-controller-body {
+    display: table-column;
 	max-width: 50%;
 	text-align: center;
 	float: right;
 	margin: 50px;
-	margin-right: -110px;
 }
 h1, h2, h3, h4, h5 {
     font-family: 'Montserrat', sans-serif;
