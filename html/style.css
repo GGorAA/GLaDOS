@@ -8,6 +8,14 @@
         opacity: 1;
     }
 }
+@keyframes appearFromDown {
+    from {
+        transform: translateY(100px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
 
 h1.home-header {
   font-family: 'Montserrat', sans-serif;
@@ -48,14 +56,19 @@ span.home-controller-vars-text {
     text-align: center;
 }
 .home-camera-display {
-    display: table-column;
+    display: table-cell;
     border: 5px solid black;
-    height: 400px;
+    height: 70%;
     width: 50%;
     position: absolute;
     left: 25%;
     right: 25%;
+    margin: 0 auto;
     animation: appearFromUp 1.2s ease-in-out;
+}
+div.home-wrapper {
+    height: 100%;
+    width: 100%;
 }
 div.head-joy {
     margin-right: 10px;
@@ -67,29 +80,32 @@ h1.controls-heading {
 	font-family: 'Montserrat', sans-serif;
 }
 div.home-controller-camera {
-    display: table-column;
+    display: table-cell;
 	max-width: 25%;
 	text-align: center;
-	float: left;
-	margin: 50px;
+    float: left;
+    margin-top: 50px;
+    margin-left: 50px;
 }
 img.home-logo {
-    animation: appearFromUp 1s ease-in-out;
+    animation: appearFromDown 1s ease-in-out;
     height: 130px;
     display: block;
     position: fixed;
-    bottom: 0;
+    bottom: 10px;
     left: 25%;
     right: 25%;
     margin-left: auto;
     margin-right: auto;
 }
 div.home-controller-body {
-    display: table-column;
+    display: table-cell;
 	max-width: 50%;
+    float: right;
 	text-align: center;
-	float: right;
-	margin: 50px;
+    vertical-align: bottom;
+    margin-top: 50px;
+    margin-right: 50px;
 }
 h1, h2, h3, h4, h5 {
     font-family: 'Montserrat', sans-serif;
