@@ -4,8 +4,10 @@
     Creator: GGorAA
     Version: 1.0beta
 """
-#import start
 import argparse
+import distutils
+
+import settings
 
 """
     Documentation
@@ -17,7 +19,7 @@ import argparse
     Arm bend: 4
     Head turn: 5
     Head tilt: 6
-    Head LED: 7
+    Eye LED: 7
     Base LEDs: 8
     
     Modes
@@ -57,8 +59,9 @@ if args.device and args.state:
     device = args.device
     state = args.state
 
-    if device == 7:
-        print("Selected device number 7. GPIO pin: 16.")
-    elif device == 8:
-        print("Selected device number 8. GPIO pin: 18.")
-
+    if state == "on" or state == "true" or state == "1" or state == "True":
+        print("Device", device, "is now on")
+    elif state == "off" or state == "false" or state == "0" or state == "False":
+        print("Device", device, "is now off")
+    else:
+        print("Wrong device state was selected. Expected value is true, on, 1, True or false, off, 0, False")

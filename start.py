@@ -1,5 +1,6 @@
 import os
-#import RPi.GPIO as GPIO
+import settings
+import RPi.GPIO as GPIO
 import time
 
 """
@@ -19,27 +20,28 @@ print("                                                   __/ |                 
 print("                                                  |___/                       ")
 print("Version 1.0beta")
 print("Starting setup...")
+
+print("Writing values to 'settings.py' file...")
+try:
+    settings.baseTurn_GPIO = 11
+    settings.armBend_GPIO = 12
+    settings.baseTiltForward_GPIO = 22
+    settings.baseTiltSide_GPIO = 29
+    settings.headTurnServo_GPIO = 13
+    settings.headServo_GPIO = 15
+    settings.headLED_GPIO = 16
+    settings.baseLEDs_GPIO = 18
+except:
+    print("Error occurred while writing settings values. Skipping...")
 print("Setting up GPIO ports...")
 
 try:
-    print("Assigning variables...")
-    statusLED = 7
-    baseMotor = 11
-    bodyServo = 12
-    headTurnServo = 13
-    headServo = 15
-    headLED = 16
-    baseLEDs = 18
-    print("Setting up pins...")
-    """GPIO.setMode(GPIO.BOARD)
-    GPIO.setup(statusLED, GPIO.OUT)
-    GPIO.setup(baseMotor, GPIO.OUT)
-    GPIO.setup(bodyServo, GPIO.OUT)
-    GPIO.setup(headTurnServo, GPIO.OUT)
-    GPIO.setup(headServo, GPIO.OUT)
-    GPIO.setup(headLED, GPIO.OUT)
-    """
-    print("GPIO ports setup ended with success.")
+    GPIO.setMode(GPIO.BOARD)
+    GPIO.setup(settings.baseTurn_GPIO, GPIO.OUT)
+    GPIO.setup(settings.armBend_GPIO, GPIO.OUT)
+    GPIO.setup(settings.headTurn_GPIO, GPIO.OUT)
+    GPIO.setup(settings.headTilt_GPIO, GPIO.OUT)
+    GPIO.setup(settings.eyeLED_GPIO, GPIO.OUT)
 except:
     """
     GPIO.cleanup()
