@@ -21,20 +21,7 @@ print("                                                  |___/                  
 print("Version 1.0beta")
 print("Starting setup...")
 
-print("Writing values to 'settings.py' file...")
-try:
-    settings.baseTurn_GPIO = 11
-    settings.armBend_GPIO = 12
-    settings.baseTiltForward_GPIO = 22
-    settings.baseTiltSide_GPIO = 29
-    settings.headTurnServo_GPIO = 13
-    settings.headServo_GPIO = 15
-    settings.headLED_GPIO = 16
-    settings.baseLEDs_GPIO = 18
-except:
-    print("Error occurred while writing settings values. Skipping...")
 print("Setting up GPIO ports...")
-
 try:
     GPIO.setMode(GPIO.BOARD)
     GPIO.setup(settings.baseTurn_GPIO, GPIO.OUT)
@@ -43,9 +30,8 @@ try:
     GPIO.setup(settings.headTilt_GPIO, GPIO.OUT)
     GPIO.setup(settings.eyeLED_GPIO, GPIO.OUT)
 except:
-    """
     GPIO.cleanup()
-    """
+
     print("Error while setting up GPIO ports. Rebooting...")
     time.sleep(1000)
     #os.system('/sbin/reboot')
@@ -53,20 +39,16 @@ except:
 print("Starting modules...")
 
 print("Starting camera stream...")
-"""
 try:
     os.system(
         'LD_LIBRARY_PATH=/opt/mjpg-streamer/ /opt/mjpg-streamer/mjpg_streamer -i "input_raspicam.so -fps 30 -q 50 -x '
         '640 -y 480" -o "output_http.so -p 9000 -w /opt/mjpg-streamer/www" &')
 except:
     print("Failed to start camera stream.")
-"""
 print("Starting web server...")
-"""
 try:
     os.system('sudo /etc/init.d/nginx start')
 except:
     print("Error while starting the web server.")
-"""
 
 print("GLaDOS started successfully!")
