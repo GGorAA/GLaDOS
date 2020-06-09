@@ -5,9 +5,8 @@
     Version: 1.0beta
 """
 import argparse
-import distutils
-
 import settings
+import functions
 
 """
     Documentation
@@ -59,9 +58,11 @@ if args.device and args.state:
     device = args.device
     state = args.state
 
-    if state == "on" or state == "true" or state == "1" or state == "True":
+    state = functions.convertStringToBool(state)
+
+    if state == True:
         print("Device", device, "is now on")
-    elif state == "off" or state == "false" or state == "0" or state == "False":
+    elif state == False:
         print("Device", device, "is now off")
     else:
         print("Wrong device state was selected. Expected value is true, on, 1, True or false, off, 0, False")
