@@ -7,3 +7,13 @@ def convertStringToBool(value):
         result = False
 
     return result
+
+
+def controlDeviceOnOffState(device, state):
+    state = convertStringToBool(state)
+    if state:
+        print("Device", device, "is now off")
+    elif not state:
+        print("Device", device, "is now off")
+    else:
+        print("Wrong device state was selected. Expected value is true, on, 1, True or false, off, 0, False")
