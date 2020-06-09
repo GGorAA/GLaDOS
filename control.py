@@ -21,7 +21,7 @@ parser.add_argument("--state")
 args = parser.parse_args()
 
 if args.device and args.number and args.time:
-    pass
+    core.deviceControl.moveMotorDevice(args.device, args.number, args.time)
 
 if args.device and args.mode and args.number:
     core.deviceControl.moveServoDevice(args.device, args.mode, args.number)

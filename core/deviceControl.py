@@ -19,4 +19,4 @@ def moveServoDevice(device, mode, number):
 
 
 def moveMotorDevice(device, number, time):
-    pass
+    print("Moved motor", device, "by", time, "milliseconds and", number, "power")
