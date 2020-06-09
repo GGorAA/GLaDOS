@@ -45,10 +45,10 @@ try:
         '640 -y 480" -o "output_http.so -p 9000 -w /opt/mjpg-streamer/www" &')
 except:
     print("Failed to start camera stream.")
-print("Starting web server...")
+print("Starting html server...")
 try:
     os.system('sudo /etc/init.d/nginx start')
 except:
-    print("Error while starting the web server.")
+    print("Error while starting the html server.")
 
 print("GLaDOS started successfully!")

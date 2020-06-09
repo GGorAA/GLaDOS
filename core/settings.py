@@ -15,10 +15,11 @@ baseTurn = 1
 baseTiltForward = 3
 baseTiltSide = 2
 armBend = 4
-headTurn = 5
-headTilt = 6
-eyeLED = 7
-baseLEDs = 8
+armBendSide = 5
+headTurn = 6
+headTilt = 7
+eyeLED = 8
+baseLEDs = 9
 
 # Default device state
 baseTurnState_Default = True

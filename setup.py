@@ -42,9 +42,12 @@ try:
     os.system('sudo mv ~/mjpg-streamer/mjpg-streamer-experimental /opt/mjpg-streamer ')
     os.system('sudo rm -rf ~/mjpg-streamer')
 except:
-    print('Error while setting up camera streamer. Exiting...')
+    print('Error while setting up camera streamer.')
 
 print("Installing NGINX server...")
-os.system("sudo apt install nginx")
+try:
+    os.system("sudo apt install nginx")
+except:
+    print("Failed when installing NGINX server.")
 
 print("Setup completed. You can now launch GLaDOS system.")

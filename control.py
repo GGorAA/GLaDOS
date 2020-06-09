@@ -7,35 +7,6 @@
 import argparse
 import core
 
-"""
-    Documentation
-    
-    Device number to actual device
-    Base turn: 1
-    Base side tilt: 2
-    Base front tilt: 3
-    Arm bend: 4
-    Head turn: 5
-    Head tilt: 6
-    Eye LED: 7
-    Base LEDs: 8
-    
-    Modes
-    Add/subtract: 1
-    Exact number: 2
-    
-    When not specified default is 1.
-    
-    Number
-    If specified mode 1, you need to specify number, which will be used as a angle. e.g. turn one side by 3: control.py --device 4 --mode 1 --number 3. Turn to the opposite side: --number -3.
-    If specified mode 2, you need to specify exact number on which you need to turn. e.g. --number 90.
-    
-    State
-    This argument is for enabling\disabling devices. Example: control.py --device 7 --state false. 
-    This command tells to a head LED to to turn off. 
-    The same command to turn it back on: control.py --device 7 --state true.
-"""
-
 # Adding arguments
 
 # Defining parser variable
@@ -44,17 +15,16 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--device")
 parser.add_argument("--mode")
 parser.add_argument("--number")
+parser.add_argument("--time")
 parser.add_argument("--state")
 # Assigning parsed args to a "args" variable
 args = parser.parse_args()
 
+if args.device and args.number and args.time:
+    pass
+
 if args.device and args.mode and args.number:
-    device = args.device
-    mode = args.mode
-    number = args.number
+    core.deviceControl.moveServoDevice(args.device, args.mode, args.number)
 
 if args.device and args.state:
-    device = args.device
-    state = args.state
-
-    core.functions.controlDeviceOnOffState(device, state)
+    core.deviceControl.OnOffState(args.device, args.state)
