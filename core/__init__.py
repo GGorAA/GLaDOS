@@ -1,4 +1,3 @@
-from .functions import *
+from .main import *
 from core.settings import *
-from .deviceControl import *
-from .audioControl import *
+from core.deviceControl import *
