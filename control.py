@@ -5,8 +5,7 @@
     Version: 1.0beta
 """
 import argparse
-import settings
-import functions
+import core
 
 """
     Documentation
@@ -58,11 +57,4 @@ if args.device and args.state:
     device = args.device
     state = args.state
 
-    state = functions.convertStringToBool(state)
-
-    if state == True:
-        print("Device", device, "is now on")
-    elif state == False:
-        print("Device", device, "is now off")
-    else:
-        print("Wrong device state was selected. Expected value is true, on, 1, True or false, off, 0, False")
+    core.functions.controlDeviceOnOffState(device, state)

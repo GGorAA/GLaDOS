@@ -1,5 +1,5 @@
 import os
-import settings
+from core import settings
 import RPi.GPIO as GPIO
 import time
 
