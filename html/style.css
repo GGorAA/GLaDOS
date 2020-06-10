@@ -23,10 +23,8 @@ h1.home-header {
   margin-top: 25px;
 }
 button {
-	padding: 10px;
-	padding-left: 15px;
-	padding-right: 15px;
-	font-family: 'Montserrat', sans-serif;
+    padding: 10px 15px;
+    font-family: 'Montserrat', sans-serif;
 	border: 0;
 	border-radius: 50px;
 box-shadow:  4px 4px 7px #d9d9d9;
@@ -80,6 +78,9 @@ h1.controls-heading {
 	font-family: 'Montserrat', sans-serif;
 }
 div.home-controller-camera {
+    position: fixed;
+    left: 0;
+    bottom: 0;
     display: table-cell;
 	max-width: 25%;
 	text-align: center;
@@ -99,6 +100,9 @@ img.home-logo {
     margin-right: auto;
 }
 div.home-controller-body {
+    position: fixed;
+    right: 0;
+    bottom: 0;
     display: table-cell;
 	max-width: 50%;
     float: right;

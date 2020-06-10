@@ -1,14 +1,14 @@
 /*
  * Name          : joy.js
  * @author       : Roberto D'Amico (Bobboteck)
- * Last modified : 06.06.2020
+ * Last modified : 09.06.2020
  * Revision      : 1.1.6
  *
  * Modification History:
  * Date         Version     Modified By		Description
- * 2020-06-06   1.1.6       GGorAA          Changed colors to fit color scheme
+ * 2020-06-09	1.1.6		Roberto D'Amico	Fixed Issue #10 and #11
  * 2020-04-20	1.1.5		Roberto D'Amico	Correct: Two sticks in a row, thanks to @liamw9534 for the suggestion
- * 2020-04-03   1.1.4.1     Roberto D'Amico Correct: InternalRadius when change the size of canvas, thanks to @vanslipon for the suggestion
+ * 2020-04-03               Roberto D'Amico Correct: InternalRadius when change the size of canvas, thanks to @vanslipon for the suggestion
  * 2020-01-07	1.1.4		Roberto D'Amico Close #6 by implementing a new parameter to set the functionality of auto-return to 0 position
  * 2019-11-18	1.1.3		Roberto D'Amico	Close #5 correct indication of East direction
  * 2019-11-12   1.1.2       Roberto D'Amico Removed Fix #4 incorrectly introduced and restored operation with touch devices
@@ -59,11 +59,11 @@ var JoyStick = (function(container, parameters)
 	var title = (typeof parameters.title === "undefined" ? "joystick" : parameters.title),
 		width = (typeof parameters.width === "undefined" ? 0 : parameters.width),
 		height = (typeof parameters.height === "undefined" ? 0 : parameters.height),
-		internalFillColor = (typeof parameters.internalFillColor === "undefined" ? "#F9FD2C" : parameters.internalFillColor),
+		internalFillColor = (typeof parameters.internalFillColor === "undefined" ? "#00AA00" : parameters.internalFillColor),
 		internalLineWidth = (typeof parameters.internalLineWidth === "undefined" ? 2 : parameters.internalLineWidth),
-		internalStrokeColor = (typeof parameters.internalStrokeColor === "undefined" ? "#F9FD2C" : parameters.internalStrokeColor),
+		internalStrokeColor = (typeof parameters.internalStrokeColor === "undefined" ? "#003300" : parameters.internalStrokeColor),
 		externalLineWidth = (typeof parameters.externalLineWidth === "undefined" ? 2 : parameters.externalLineWidth),
-		externalStrokeColor = (typeof parameters.externalStrokeColor ===  "undefined" ? "#C4C4C4" : parameters.externalStrokeColor),
+		externalStrokeColor = (typeof parameters.externalStrokeColor ===  "undefined" ? "#008000" : parameters.externalStrokeColor),
 		autoReturnToCenter = (typeof parameters.autoReturnToCenter === "undefined" ? true : parameters.autoReturnToCenter);
 	
 	// Create Canvas element and add it in the Container object
@@ -108,9 +108,11 @@ var JoyStick = (function(container, parameters)
 	// Draw the object
 	drawExternal();
 	drawInternal();
+
 	/******************************************************
 	 * Private methods
 	 *****************************************************/
+
 	/**
 	 * @desc Draw the external circle used as reference position
 	 */
@@ -122,6 +124,7 @@ var JoyStick = (function(container, parameters)
 		context.strokeStyle = externalStrokeColor;
 		context.stroke();
 	}
+
 	/**
 	 * @desc Draw the internal stick in the current position the user have moved it
 	 */
@@ -153,6 +156,7 @@ var JoyStick = (function(container, parameters)
 	{
 		pressed = 1;
 	}
+
 	function onTouchMove(event)
 	{
 		// Prevent the browser from doing its default thing (scroll, zoom)
@@ -162,8 +166,16 @@ var JoyStick = (function(container, parameters)
 			movedX = event.targetTouches[0].pageX;
 			movedY = event.targetTouches[0].pageY;
 			// Manage offset
-			movedX -= canvas.offsetLeft;
-			movedY -= canvas.offsetTop;
+			if(canvas.offsetParent.tagName.toUpperCase() === "BODY")
+			{
+				movedX -= canvas.offsetLeft;
+				movedY -= canvas.offsetTop;
+			}
+			else
+			{
+				movedX -= canvas.offsetParent.offsetLeft;
+				movedY -= canvas.offsetParent.offsetTop;
+			}
 			// Delete canvas
 			context.clearRect(0, 0, canvas.width, canvas.height);
 			// Redraw object
@@ -171,6 +183,7 @@ var JoyStick = (function(container, parameters)
 			drawInternal();
 		}
 	} 
+
 	function onTouchEnd(event) 
 	{
 		pressed = 0;
@@ -187,6 +200,7 @@ var JoyStick = (function(container, parameters)
 		drawInternal();
 		//canvas.unbind('touchmove');
 	}
+
 	/**
 	 * @desc Events for manage mouse
 	 */
@@ -194,6 +208,7 @@ var JoyStick = (function(container, parameters)
 	{
 		pressed = 1;
 	}
+
 	function onMouseMove(event) 
 	{
 		if(pressed === 1)
@@ -201,8 +216,16 @@ var JoyStick = (function(container, parameters)
 			movedX = event.pageX;
 			movedY = event.pageY;
 			// Manage offset
-			movedX -= canvas.offsetLeft;
-			movedY -= canvas.offsetTop;
+			if(canvas.offsetParent.tagName.toUpperCase() === "BODY")
+			{
+				movedX -= canvas.offsetLeft;
+				movedY -= canvas.offsetTop;
+			}
+			else
+			{
+				movedX -= canvas.offsetParent.offsetLeft;
+				movedY -= canvas.offsetParent.offsetTop;
+			}
 			// Delete canvas
 			context.clearRect(0, 0, canvas.width, canvas.height);
 			// Redraw object
@@ -210,6 +233,7 @@ var JoyStick = (function(container, parameters)
 			drawInternal();
 		}
 	}
+
 	function onMouseUp(event) 
 	{
 		pressed = 0;
@@ -226,9 +250,11 @@ var JoyStick = (function(container, parameters)
 		drawInternal();
 		//canvas.unbind('mousemove');
 	}
+
 	/******************************************************
 	 * Public methods
 	 *****************************************************/
+	
 	/**
 	 * @desc The width of canvas
 	 * @return Number of pixel width 
