@@ -2,7 +2,7 @@
 
 This Python project is powering GLaDOS, which is powered by Raspberry Pi.
 
-![](https://img.shields.io/badge/Version-1.0--alpha1-blue)
+![](https://img.shields.io/badge/Version-1.0--alpha3-blue)
 ![](https://img.shields.io/badge/Code%20quality-middling-yellow)
 ![](https://img.shields.io/badge/Complete-no-red)
 ![](https://img.shields.io/badge/Python-3.8-yellow)
