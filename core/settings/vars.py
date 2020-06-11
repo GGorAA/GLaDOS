@@ -32,7 +32,6 @@ headTiltState_Default = True
 eyeLEDState_Default = True
 baseLEDsState_Default = True
 
-
 # Dynamic settings
 
 # Device state
