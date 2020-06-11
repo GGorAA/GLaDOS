@@ -59,11 +59,11 @@ var JoyStick = (function(container, parameters)
 	var title = (typeof parameters.title === "undefined" ? "joystick" : parameters.title),
 		width = (typeof parameters.width === "undefined" ? 0 : parameters.width),
 		height = (typeof parameters.height === "undefined" ? 0 : parameters.height),
-		internalFillColor = (typeof parameters.internalFillColor === "undefined" ? "#00AA00" : parameters.internalFillColor),
+		internalFillColor = (typeof parameters.internalFillColor === "undefined" ? "#E8EC32" : parameters.internalFillColor),
 		internalLineWidth = (typeof parameters.internalLineWidth === "undefined" ? 2 : parameters.internalLineWidth),
-		internalStrokeColor = (typeof parameters.internalStrokeColor === "undefined" ? "#003300" : parameters.internalStrokeColor),
+		internalStrokeColor = (typeof parameters.internalStrokeColor === "undefined" ? "#E8EC32" : parameters.internalStrokeColor),
 		externalLineWidth = (typeof parameters.externalLineWidth === "undefined" ? 2 : parameters.externalLineWidth),
-		externalStrokeColor = (typeof parameters.externalStrokeColor ===  "undefined" ? "#008000" : parameters.externalStrokeColor),
+		externalStrokeColor = (typeof parameters.externalStrokeColor ===  "undefined" ? "#A6A6A6" : parameters.externalStrokeColor),
 		autoReturnToCenter = (typeof parameters.autoReturnToCenter === "undefined" ? true : parameters.autoReturnToCenter);
 	
 	// Create Canvas element and add it in the Container object
