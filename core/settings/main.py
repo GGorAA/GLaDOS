@@ -9,6 +9,3 @@ def getDeviceIDToState(deviceid):
     else:
         output = "Error"
     return output
-
-
-
