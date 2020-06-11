@@ -5,6 +5,7 @@ baseTurn_GPIO = 11
 baseTiltForward_GPIO = 22
 baseTiltSide_GPIO = 29
 armBend_GPIO = 12
+armBendSide_GPIO = 31
 headTurn_GPIO = 13
 headTilt_GPIO = 15
 eyeLED_GPIO = 16
