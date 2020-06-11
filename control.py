@@ -21,6 +21,8 @@ parser.add_argument("--state")
 args = parser.parse_args()
 
 if args.device and args.number and args.time:
+    output = core.settings.eyeLEDState
+    print(output)
     core.deviceControl.moveMotorDevice(args.device, args.number, args.time)
 
 if args.device and args.mode and args.number:

@@ -1,11 +1,12 @@
 import core
 
+
 def OnOffState(device, state):
     if state == "on":
-        if device == 1:
+        if device == "1":
             core.settings.baseTurnState = True
             print("Device", device, "is now on")
-        elif device == 2:
+        elif device == "2":
             core.settings.baseTiltForwardState = True
             print("Device", device, "is now on")
         elif device == 3:
@@ -32,31 +33,31 @@ def OnOffState(device, state):
         else:
             print("Wrong device was selected.")
     elif state == "off":
-        if device == 1:
+        if device == "1":
             core.settings.baseTurnState = False
             print("Device", device, "is now off")
-        elif device == 2:
+        elif device == "2":
             core.settings.baseTiltForwardState = False
             print("Device", device, "is now off")
-        elif device == 3:
+        elif device == "3":
             core.settings.baseTiltSideState = False
             print("Device", device, "is now off")
-        elif device == 4:
+        elif device == "4":
             core.settings.armBendState = False
             print("Device", device, "is now off")
-        elif device == 5:
+        elif device == "5":
             core.settings.armBendSideState = False
             print("Device", device, "is now off")
-        elif device == 6:
+        elif device == "6":
             core.settings.headTurnState = False
             print("Device", device, "is now off")
-        elif device == 7:
+        elif device == "7":
             core.settings.headTiltState = False
             print("Device", device, "is now off")
-        elif device == 8:
+        elif device == "8":
             core.settings.eyeLEDState = False
             print("Device", device, "is now off")
-        elif device == 9:
+        elif device == "9":
             core.settings.baseLEDsState = False
             print("Device", device, "is now off")
         else:
