@@ -1,0 +1,42 @@
+@keyframes appearFromUp {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes appearFromDown {
+    from {
+        transform: translateY(100px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+@keyframes appearHead {
+    from {
+        transform: translateX(-300px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes appearBody {
+    from {
+        transform: translateX(300px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes appearFromUpDisplay {
+    from {
+        transform: translateY(-2000px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}

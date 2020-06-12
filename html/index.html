@@ -7,6 +7,7 @@
     <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
     <script src="joy.js"></script>
+    <script src="control.js"></script>
     <title>GLaDOS Control Panel</title>
 </head>
 <body>
@@ -22,7 +23,7 @@
             </div>
             <div id="headJoy" class="head-joy" style="width:200px; height:200px; margin-bottom:20px;"></div>
         </div>
-        <iframe class="home-camera-display" src="https://example.com" height="480px" width="640px"></iframe>
+        <iframe class="home-camera-display" src="https://example.com"></iframe>
         <div class="home-controller-logs">
             <div class="home-controller-vars">
                 <!-- <span class="home-controller-vars-text"><h2>Status variables</h2></span> -->
@@ -44,7 +45,7 @@
         </div>
     </div>
     <img class="home-logo" src="long_logo.png">
-    <script type="text/javascript">
+    <script>
 
         // Create JoyStick object into the div 'headJoy'
         var headjoy = new JoyStick('headJoy');

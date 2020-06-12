@@ -1,21 +1,4 @@
-@keyframes appearFromUp {
-    from {
-        transform: translateY(-100px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
-@keyframes appearFromDown {
-    from {
-        transform: translateY(100px);
-    }
-    to {
-        transform: translateY(0px);
-    }
-}
+@import "animations.css";
 
 h1.home-header {
   font-family: 'Montserrat', sans-serif;
@@ -27,8 +10,8 @@ button {
     font-family: 'Montserrat', sans-serif;
 	border: 0;
 	border-radius: 50px;
-box-shadow:  4px 4px 7px #d9d9d9;
-	transition-duration: 500ms;
+    box-shadow:  4px 4px 7px #d9d9d9;
+	transition-duration: 50ms;
 	height: 50px;
 	width: 80px;
 	margin: 5px;
@@ -36,14 +19,14 @@ box-shadow:  4px 4px 7px #d9d9d9;
 	margin-right: 20px;
 }
 button:hover {
-background: #ffffff;
-box-shadow:  7px 7px 14px #d9d9d9;
-	transition-duration: 500ms;
+    background: #ffffff;
+    box-shadow:  7px 7px 14px #d9d9d9;
+	transition-duration: 50ms;
 }
 button:active {
-background: #ffffff;
-box-shadow:  5px 5px 11px #d9d9d9;
-	transition-duration: 500ms;
+    background: #a0a0a0;
+    box-shadow:  5px 5px 11px #d9d9d9;
+	transition-duration: 80ms;
 }
 .home-controller-log {
     max-height: 300px;
@@ -58,11 +41,12 @@ span.home-controller-vars-text {
     border: 5px solid black;
     height: 70%;
     width: 50%;
+    max-height: 500px;
     position: absolute;
     left: 25%;
     right: 25%;
     margin: 0 auto;
-    animation: appearFromUp 1.2s ease-in-out;
+    animation: appearFromUpDisplay 1s cubic-bezier(0,.72,.27,.99);
 }
 div.home-wrapper {
     height: 100%;
@@ -73,12 +57,14 @@ div.head-joy {
     position: fixed;
     left: 20px;
     bottom: 0;
+    animation: appearHead 2.5s cubic-bezier(0,.72,.27,.99);
 }
 div.body-joy {
     margin-left: 10px;
     position: fixed;
     right: 20px;
     bottom: 0;
+    animation: appearBody 2.5s cubic-bezier(0,.72,.27,.99);
 }
 h1.controls-heading {
 	font-family: 'Montserrat', sans-serif;
@@ -94,15 +80,17 @@ div.home-controller-camera {
 div.home-controller-body-buttons {
     position: fixed;
     right: 10px;
+    animation: appearBody 1.5s cubic-bezier(0,.72,.27,.99);
     bottom: 230px;
 }
 div.home-controller-head-buttons {
     position: fixed;
     left: 10px;
+    animation: appearHead 1.5s cubic-bezier(0,.72,.27,.99);
     bottom: 230px;
 }
 img.home-logo {
-    animation: appearFromDown 1s ease-in-out;
+    animation: appearFromDown 1s cubic-bezier(0,.72,.27,.99);
     height: 130px;
     display: block;
     position: fixed;
