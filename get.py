@@ -1,13 +1,12 @@
-import core
 import argparse
 import sqlite3
 
 # Database setup
 
 # Connect database
-connectDatabase = sqlite3.connect('database.sqlite')
+databaseConnection = sqlite3.connect('core/database.sqlite')
 # Adding cursor(i am not sure what it is, but it was in tutorial lol)
-database = connectDatabase.cursor()
+database = databaseConnection.cursor()
 
 
 # Adding arguments
@@ -15,11 +14,15 @@ database = connectDatabase.cursor()
 # Defining parser variable
 parser = argparse.ArgumentParser()
 parser.add_argument("--setting")
-parser.add_argument("--device")
+parser.add_argument("--devicename")
 parser.add_argument("--state")
 
 args = parser.parse_args()
 
-if args.device:
-    output = core.settings.getDeviceIDToState(args.device)
-    print(output)
+if args.devicename:
+    # Get data from database, searching with ID inserted while executing
+    for output in database.execute(f"SELECT deviceName FROM device_settings WHERE ID = '{args.devicename}'"):
+        # Convert name to list
+        output = output[0]
+        # Print search result
+        print(output)
