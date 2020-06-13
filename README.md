@@ -9,18 +9,12 @@ This Python project is powering GLaDOS, which is powered by Raspberry Pi.
 
 # README.md is not complete!
 
-## Used program modules
+## Copyright credits to:
 
-### Front-end
-
-- Pure HTML, CSS and JS
-- Google Fonts
+- [Google Fonts](https://fonts.google.com)
 - [JoyStick](https://github.com/bobboteck/JoyStick)
-
-### Back-end
-
-- NGINX
-- Python
+- [NGINX](https://nginx.com)
+- [Python](https://python.org)
 
 ## Documentation
 
