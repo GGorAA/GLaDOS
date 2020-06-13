@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="database">
+<dataSource name="main">
   <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.18">
     <root id="1">
       <ServerVersion>3.25.1</ServerVersion>
@@ -11,68 +11,51 @@
     <collation id="4" parent="1" name="NOCASE"/>
     <collation id="5" parent="1" name="RTRIM"/>
     <table id="6" parent="2" name="about"/>
-    <table id="7" parent="2" name="device_settings"/>
-    <table id="8" parent="2" name="logs"/>
-    <table id="9" parent="2" name="sqlite_master">
+    <table id="7" parent="2" name="logs"/>
+    <table id="8" parent="2" name="sqlite_master">
       <System>1</System>
     </table>
-    <column id="10" parent="6" name="name">
+    <column id="9" parent="6" name="name">
       <Position>1</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="11" parent="6" name="value">
+    <column id="10" parent="6" name="value">
       <Position>2</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="12" parent="7" name="deviceName">
+    <column id="11" parent="7" name="name">
       <Position>1</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="13" parent="7" name="GPIO">
+    <column id="12" parent="7" name="message">
       <Position>2</Position>
-      <DataType>int|0s</DataType>
+      <DataType>text|0s</DataType>
     </column>
-    <column id="14" parent="7" name="ID">
+    <column id="13" parent="7" name="type">
       <Position>3</Position>
-      <DataType>int|0s</DataType>
+      <DataType>text|0s</DataType>
     </column>
-    <column id="15" parent="7" name="state">
+    <column id="14" parent="7" name="isError">
       <Position>4</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="16" parent="7" name="defaultState">
-      <Position>5</Position>
-      <DataType>int|0s</DataType>
-    </column>
-    <column id="17" parent="8" name="errorType">
+    <column id="15" parent="8" name="type">
       <Position>1</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="18" parent="8" name="errorText">
+    <column id="16" parent="8" name="name">
       <Position>2</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="19" parent="8" name="occurTime">
-      <Position>3</Position>
-      <DataType>int|0s</DataType>
-    </column>
-    <column id="20" parent="9" name="type">
-      <Position>1</Position>
-      <DataType>text|0s</DataType>
-    </column>
-    <column id="21" parent="9" name="name">
-      <Position>2</Position>
-      <DataType>text|0s</DataType>
-    </column>
-    <column id="22" parent="9" name="tbl_name">
+    <column id="17" parent="8" name="tbl_name">
       <Position>3</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="23" parent="9" name="rootpage">
+    <column id="18" parent="8" name="rootpage">
       <Position>4</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="24" parent="9" name="sql">
+    <column id="19" parent="8" name="sql">
       <Position>5</Position>
       <DataType>text|0s</DataType>
     </column>

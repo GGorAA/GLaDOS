@@ -14,15 +14,22 @@ database = databaseConnection.cursor()
 # Defining parser variable
 parser = argparse.ArgumentParser()
 parser.add_argument("--setting")
-parser.add_argument("--devicename")
-parser.add_argument("--state")
+parser.add_argument("--deviceName")
+parser.add_argument("--deviceState")
+parser.add_argument("--deviceGPIO")
 
 args = parser.parse_args()
 
-if args.devicename:
+if args.deviceName:
     # Get data from database, searching with ID inserted while executing
-    for output in database.execute(f"SELECT deviceName FROM device_settings WHERE ID = '{args.devicename}'"):
-        # Convert name to list
+    for output in database.execute(f"SELECT deviceName FROM devices WHERE ID = '{args.devicename}'"):
+        # Convert list to name
+        output = output[0]
+        # Print search result
+        print(output)
+if args.deviceState:
+    for output in database.execute(f"SELECT state FROM devices WHERE ID = '{args.deviceState}'"):
+        # Convert list to name
         output = output[0]
         # Print search result
         print(output)

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="database" uuid="3cbb457e-38de-4cfa-a139-b42635180e95">
+    <data-source source="LOCAL" name="settings" uuid="033a6bc0-d100-4e29-914b-af8e95dccab5">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\ggora\GitHub\GLaDOS\core\database.sqlite</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\ggora\GitHub\GLaDOS\core\databases\settings.sqlite</jdbc-url>
       <libraries>
         <library>
           <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.25.1/license.txt</url>
@@ -15,11 +15,19 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="main.sqlite" uuid="976b7426-025a-444d-9c68-97d3d742c542">
+    <data-source source="LOCAL" name="main" uuid="a3978e25-d726-4075-baac-8690f97978ed">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/core/databases/main.sqlite</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\ggora\GitHub\GLaDOS\core\databases\main.sqlite</jdbc-url>
+      <libraries>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.25.1/license.txt</url>
+        </library>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.25.1/sqlite-jdbc-3.25.1.jar</url>
+        </library>
+      </libraries>
     </data-source>
   </component>
 </project>
