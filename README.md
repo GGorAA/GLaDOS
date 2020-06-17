@@ -2,26 +2,20 @@
 
 This Python project is powering GLaDOS, which is powered by Raspberry Pi.
 
-![](https://img.shields.io/badge/Version-1.0--alpha3-blue)
+![](https://img.shields.io/badge/Version-1.0--dev4-blue)
 ![](https://img.shields.io/badge/Code%20quality-middling-yellow)
 ![](https://img.shields.io/badge/Complete-no-red)
 ![](https://img.shields.io/badge/Python-3.8-yellow)
 
 # README.md is not complete!
 
-## Used program modules
+## Copyright credits to:
 
-### Front-end
-
-- Pure HTML, CSS and JS
-- Google Fonts
+- [Google Fonts](https://fonts.google.com)
 - [JoyStick](https://github.com/bobboteck/JoyStick)
-
-### Back-end
-
-- NGINX
-- Python
-
+- [NGINX](https://nginx.com)
+- [Python](https://python.org)
+- [GLaDOS Selling Lamp](https://www.instructables.com/id/A-fully-3D-printable-GlaDOS-Robotic-ceiling-arm-la)
 ## Documentation
 
 ### control.py
