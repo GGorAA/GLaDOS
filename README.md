@@ -11,13 +11,15 @@ Project is frozen for now. Developer does not have ideas how to complete it :)
 
 # README.md is not complete!
 
-## Copyright credits to:
+## Credits to:
 
+- [Django](https://www.djangoproject.com)
 - [Google Fonts](https://fonts.google.com)
 - [JoyStick](https://github.com/bobboteck/JoyStick)
 - [NGINX](https://nginx.com)
 - [Python](https://python.org)
 - [GLaDOS Selling Lamp](https://www.instructables.com/id/A-fully-3D-printable-GlaDOS-Robotic-ceiling-arm-la)
+
 ## Documentation
 
 ### control.py
