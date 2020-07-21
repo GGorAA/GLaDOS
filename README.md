@@ -4,6 +4,9 @@ This Python project is powering GLaDOS, which is powered by Raspberry Pi.
 
 Project is frozen for now. Developer does not have ideas how to complete it :)
 
+## Plans
+I am now planning to transfer project to Kotlin language because it is better for me, and the whole project will be faster and easier to make and maintain, because I am a Kotlin developer, and I feel bad on Python. The transition begins now. Just wait)
+
 ![](https://img.shields.io/badge/Version-1.0--dev4-blue)
 ![](https://img.shields.io/badge/Code%20quality-middling-yellow)
 ![](https://img.shields.io/badge/Complete-no-red)
