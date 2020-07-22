@@ -25,7 +25,7 @@ import org.springframework.ui.set
 import org.springframework.web.bind.annotation.GetMapping
 
 @Controller
-class HomeController {
+class MainController {
     @GetMapping("/")
     fun displayHome(model: Model): String {
         model["title"] = "GLaDOS Control Panel"
