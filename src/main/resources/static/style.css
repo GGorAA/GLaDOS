@@ -110,7 +110,44 @@ div.home-controller-body {
     margin-top: 50px;
     margin-right: 50px;
 }
+
 h1, h2, h3, h4, h5 {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
+}
+
+.top_control_bar {
+    display: block;
+    box-shadow: 2px 2px;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.top_control_bar a {
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.top_control_bar a:hover {
+    background-color: #fffdc9;
+    color: black;
+}
+
+.top_control_bar a.active {
+    background-color: #f0e930;
+    color: black;
+}
+
+img.settings_button {
+    margin-right: 12px;
+    margin-top: 12px;
+    min-height: 48px;
+    min-width: 48px;
+    position: fixed;
+    top: 0;
+    right: 0;
 }
