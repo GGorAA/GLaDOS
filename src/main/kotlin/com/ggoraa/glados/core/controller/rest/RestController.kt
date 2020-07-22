@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class MainController {
+class RestController {
     @GetMapping("/rest/move/head/{xAxis}/{yAxis}")
     fun controlHead(
             @PathVariable yAxis: Int,
