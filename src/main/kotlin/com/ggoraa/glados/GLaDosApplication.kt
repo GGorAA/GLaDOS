@@ -4,8 +4,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class GLaDosApplication
+class GladosApplication
 
 fun main(args: Array<String>) {
-    runApplication<GLaDosApplication>(*args)
+    runApplication<GladosApplication>(*args)
 }
