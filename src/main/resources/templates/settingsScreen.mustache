@@ -1,14 +1,11 @@
-<div class="sidebar">
-    <a href="/settings"><h1 class="sidebar_label">Settings</h1></a>
-    <a href="/settings/appearance" class="sidebar_element">Appearance</a>
-    <a href="/settings/gpio" class="sidebar_element">GPIO</a>
-    <a href="settings/camera" class="sidebar_element">Camera</a>
-    <a href="/settings/audio" class="sidebar_element">Audio</a>
-</div>
+{{> settingsSidebar}}
 <div class="content">
-    <h1>You are at the homepage of GLaDOS Settings</h1>
+    <h1 class="welcome_message">You are at the homepage of GLaDOS Settings. Click any of the options on the sidebar to start! </h1>
 </div>
 <style>
+    h1.welcome_message {
+        margin-top: 50px;
+    }
     /* The sidebar menu */
     h1.sidebar_label {
         font-size: 50px;
