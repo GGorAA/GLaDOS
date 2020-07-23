@@ -6,9 +6,26 @@
     <a href="/settings/audio" class="sidebar_element">Audio</a>
 </div>
 <div class="content">
-    <h1>You are at the homepage of GLaDOS Settings</h1>
+    <h1>Appearance</h1>
+    <div class="theme_setting">
+        <h2 class="theme_settings_label">Theme</h2>
+        <select name="Select theme..." id="theme_select">
+            <option value="auto">System default</option>
+            <option value="dark">Dark</option>
+            <option value="light">Light</option>
+        </select>
+    </div>
 </div>
 <style>
+    div.theme_setting {
+        display: inline-block;
+    }
+    h2.theme_settings_label {
+        display: inline-block;
+    }
+    select#theme_select {
+        display: inline-block;
+    }
     /* The sidebar menu */
     h1.sidebar_label {
         font-size: 50px;
@@ -16,6 +33,7 @@
         padding: 6px 8px 6px 16px;
         color: black;
         text-decoration: none;
+        display: block;
     }
     h1 {
         font-family: 'Montserrat', sans-serif;
