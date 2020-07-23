@@ -19,6 +19,8 @@ import com.pi4j.io.gpio.trigger.GpioCallbackTrigger
 import com.pi4j.io.gpio.trigger.GpioPulseStateTrigger
 import com.pi4j.io.gpio.trigger.GpioSetStateTrigger
 import com.pi4j.io.gpio.trigger.GpioSyncStateTrigger
+import org.jetbrains.exposed.sql.Database
 
 class HeadController {
+    val db = Database.connect("jdbc:sqlite:/data/data.db", "org.sqlite.JDBC")
 }

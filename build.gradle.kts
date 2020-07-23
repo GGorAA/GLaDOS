@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "com.ggoraa"
-version = "1.0-dev1"
+version = "1.0-dev5.1"
 java.sourceCompatibility = JavaVersion.VERSION_11
 
 repositories {
@@ -25,13 +25,19 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    runtimeOnly("org.postgresql:postgresql")
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
     }
     // Raspberry Pi GPIO dependencies
     implementation ("com.pi4j:pi4j-parent:0.0.5")
     implementation ("com.pi4j:pi4j-core:1.2")
+    // JetBrains Exposed dependencies
+    implementation("org.jetbrains.exposed", "exposed-core", "0.24.1")
+    implementation("org.jetbrains.exposed", "exposed-dao", "0.24.1")
+    implementation("org.jetbrains.exposed", "exposed-jdbc", "0.24.1")
+    //SQLite dependency
+    implementation("org.xerial:sqlite-jdbc:3.30.1")
+
 }
 
 tasks.withType<Test> {
