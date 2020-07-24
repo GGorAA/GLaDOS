@@ -60,6 +60,9 @@ class MainController {
         var labelTitle = ""
         var themeSettingsLabel = ""
         var themeSelectDefault = ""
+        var themeSelectDark = ""
+        var themeSelectLight = ""
+        var langSettingsLabel = ""
         var returnPage = "settingsAppearanceScreen"
         when (defaultLanguage) {
             "en_US" -> {
@@ -67,16 +70,27 @@ class MainController {
                 labelTitle = "Appearance"
                 themeSettingsLabel = "Theme"
                 themeSelectDefault = "System default"
+                themeSelectDark = "Dark"
+                themeSelectLight = "Light"
+                langSettingsLabel = "Language"
             }
             "ru_RU" -> {
                 pageTitle = "Настройки GLaDOS: Внешний вид"
                 labelTitle = "Внешний вид"
                 themeSettingsLabel = "Тема"
+                themeSelectDefault = "Системная"
+                themeSelectDark = "Темная"
+                themeSelectLight = "Светлая"
+                langSettingsLabel = "Язык"
             }
             "ua_UA" -> {
                 pageTitle = "Налаштування GLaDOS: Зовнішний вид"
                 labelTitle = "Зовнішний вид"
                 themeSettingsLabel = "Тема"
+                themeSelectDefault = "Системна"
+                themeSelectDark = "Темна"
+                themeSelectLight = "Світла"
+                langSettingsLabel = "Мова"
             }
             else -> {
                 returnPage = "errorLang"
@@ -85,6 +99,10 @@ class MainController {
         model["title"] = pageTitle
         model["appearance"] = labelTitle
         model["theme_settings_label"] = themeSettingsLabel
+        model["theme_select_default"] = themeSelectDefault
+        model["theme_select_dark"] = themeSelectDark
+        model["theme_select_light"] = themeSelectLight
+        model["lang_settings_label"] = langSettingsLabel
         return returnPage
     }
 }
