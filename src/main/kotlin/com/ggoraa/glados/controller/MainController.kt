@@ -56,28 +56,35 @@ class MainController {
 
     @GetMapping("/settings/appearance")
     fun displaySettingsAppearance(model: Model): String {
-        var PageTitle = ""
-        var LabelTitle = ""
-        var ReturnPage = "settingsAppearanceScreen"
+        var pageTitle = ""
+        var labelTitle = ""
+        var themeSettingsLabel = ""
+        var themeSelectDefault = ""
+        var returnPage = "settingsAppearanceScreen"
         when (defaultLanguage) {
             "en_US" -> {
-                PageTitle = "GLaDOS Settings: Appearance"
-                LabelTitle = "Appearance"
+                pageTitle = "GLaDOS Settings: Appearance"
+                labelTitle = "Appearance"
+                themeSettingsLabel = "Theme"
+                themeSelectDefault = "System default"
             }
             "ru_RU" -> {
-                PageTitle = "Настройки GLaDOS: Внешний вид"
-                LabelTitle = "Внешний вид"
+                pageTitle = "Настройки GLaDOS: Внешний вид"
+                labelTitle = "Внешний вид"
+                themeSettingsLabel = "Тема"
             }
             "ua_UA" -> {
-                PageTitle = "Налаштування GLaDOS: Зовнішний вид"
-                LabelTitle = "Зовнішний вид"
+                pageTitle = "Налаштування GLaDOS: Зовнішний вид"
+                labelTitle = "Зовнішний вид"
+                themeSettingsLabel = "Тема"
             }
             else -> {
-                ReturnPage = "errorLang"
+                returnPage = "errorLang"
             }
         }
-        model["title"] = PageTitle
-        model["appearance"] = LabelTitle
-        return ReturnPage
+        model["title"] = pageTitle
+        model["appearance"] = labelTitle
+        model["theme_settings_label"] = themeSettingsLabel
+        return returnPage
     }
 }
