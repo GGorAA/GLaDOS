@@ -1,5 +1,6 @@
+{{> settingsHeader}}
 {{> settingsSidebar}}
-<div class="content">
+<div class="content" style="margin-left: {{content_padding}}px">
     <h1 class="first_label">{{appearance}}</h1>
     <div class="theme_setting">
         <h2 class="theme_settings_label">{{theme_settings_label}}</h2>
@@ -41,7 +42,6 @@
 
     /* Style page content */
     .content {
-        margin-left: 300px; /* Same as the width of the sidebar */
         padding: 0px 10px;
     }
 

@@ -1,10 +1,10 @@
-<div class="sidebar">
-    <a href="/settings"><h1 class="sidebar_label">Settings</h1></a>
-    <a href="/settings/appearance" class="sidebar_element">Appearance</a>
-    <a href="/settings/gpio" class="sidebar_element">GPIO</a>
-    <a href="settings/camera" class="sidebar_element">Camera</a>
-    <a href="/settings/audio" class="sidebar_element">Audio</a>
-    <a href="/" class="sidebar_element_exit"><img src="icons/arrow-left.png" class="back_icon" alt="Back icon"></a>
+<div class="sidebar" style="width: {{sidebar_width_px}}px">
+    <a href="/settings"><h1 class="sidebar_label">{{sidebar_label}}</h1></a>
+    <a href="/settings/appearance" class="sidebar_element">{{sidebar_element_appearance}}</a>
+    <a href="/settings/gpio" class="sidebar_element">{{sidebar_element_gpio}}</a>
+    <a href="settings/camera" class="sidebar_element ">{{sidebar_element_camera}}</a>
+    <a href="/settings/audio" class="sidebar_element">{{sidebar_element_audio}}</a>
+    <a href="/" class="sidebar_element_exit">Exit</a>
 </div>
 <style>
     img.back_icon {
@@ -30,7 +30,6 @@
     }
     /* main styles */
     .sidebar {
-        width: 250px; /* Set the width of the sidebar */
         position: fixed; /* Fixed Sidebar (stay in place on scroll) */
         z-index: 1; /* Stay on top */
         top: 0; /* Stay at the top */
