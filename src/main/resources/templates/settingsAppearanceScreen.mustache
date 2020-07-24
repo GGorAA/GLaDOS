@@ -1,12 +1,19 @@
 {{> settingsSidebar}}
 <div class="content">
-    <h1 class="first_label">Appearance</h1>
+    <h1 class="first_label">{{appearance}}</h1>
     <div class="theme_setting">
         <h2 class="theme_settings_label">Theme</h2>
         <select name="Select theme..." id="theme_select">
             <option value="auto">System default</option>
             <option value="dark">Dark</option>
             <option value="light">Light</option>
+        </select>
+        <br>
+        <h2 class="lang_settings_label">Language</h2>
+        <select name="Select language..." id="lang_select">
+            <option value="en_US">English</option>
+            <option value="ru_RU">Русский</option>
+            <option value="ua_UA">Українська</option>
         </select>
     </div>
 </div>
@@ -19,6 +26,11 @@
     }
     h2.theme_settings_label {
         display: inline-block;
+        font-family: 'Montserrat', sans-serif;
+    }
+    h2.lang_settings_label {
+        display: inline-block;
+        font-family: 'Montserrat', sans-serif;
     }
     select#theme_select {
         display: inline-block;
