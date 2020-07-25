@@ -2,6 +2,7 @@ package com.ggoraa.glados.controller
 
 
 import com.ggoraa.glados.config.defaultLanguage
+import com.ggoraa.glados.config.passedOOBE
 import com.ggoraa.glados.core.*
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
@@ -13,23 +14,28 @@ import org.springframework.web.bind.annotation.GetMapping
 class MainController {
     @GetMapping("/")
     fun displayHome(model: Model): String {
-        var PageTitle = ""
-        var ReturnPage = "mainScreen"
-        when (defaultLanguage) {
-            "en_US" -> {
-                PageTitle = pageTitle_en_US_Homepage
+        var ReturnPage = ""
+        if (!passedOOBE) {
+            ReturnPage = "setup/start"
+        } else {
+            var PageTitle = ""
+            ReturnPage = "mainScreen"
+            when (defaultLanguage) {
+                "en_US" -> {
+                    PageTitle = pageTitle_en_US_Homepage
+                }
+                "ru_RU" -> {
+                    PageTitle = pageTitle_ru_RU_Homepage
+                }
+                "ua_UA" -> {
+                    PageTitle = pageTitle_ua_UA_Homepage
+                }
+                else -> {
+                    ReturnPage = "errorLang"
+                }
             }
-            "ru_RU" -> {
-                PageTitle = pageTitle_ru_RU_Homepage
-            }
-            "ua_UA" -> {
-                PageTitle = pageTitle_ua_UA_Homepage
-            }
-            else -> {
-                ReturnPage = "errorLang"
-            }
+            model["title"] = PageTitle
         }
-        model["title"] = PageTitle
         return ReturnPage
     }
 
@@ -130,8 +136,8 @@ class MainController {
                 contentPadding = "300"
             }
             "ru_RU" -> {
-                pageTitle = "Настройки GLaDOS: Внешний вид"
-                labelTitle = "Внешний вид"
+                pageTitle = pageTitle_ru_RU_SettingsAppearance
+                labelTitle = labelTitle_ru_RU_SettingsAppearance
                 themeSettingsLabel = "Тема"
                 themeSelectDefault = "Системная"
                 themeSelectDark = "Темная"
@@ -146,8 +152,8 @@ class MainController {
                 contentPadding = "400"
             }
             "ua_UA" -> {
-                pageTitle = "Налаштування GLaDOS: Зовнішній вигляд"
-                labelTitle = "Зовнішній вигляд"
+                pageTitle = pageTitle_ua_UA_SettingsAppearance
+                labelTitle = labelTitle_ua_UA_SettingsAppearance
                 themeSettingsLabel = "Тема"
                 themeSelectDefault = "Системна"
                 themeSelectDark = "Темна"

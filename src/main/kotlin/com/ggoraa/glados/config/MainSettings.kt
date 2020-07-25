@@ -7,5 +7,4 @@ package com.ggoraa.glados.config
 const val debugMode = false
 const val defaultLanguage = "ru_RU"
 const val defaultColorTheme = "light"
-
-
+const val passedOOBE = false

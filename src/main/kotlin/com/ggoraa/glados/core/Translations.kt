@@ -30,4 +30,8 @@ const val sidebarElementAudio_ru_RU = "Аудио"
 const val sidebarElementAudio_ua_UA = "Аудіо"
 // Settings appearance page
 const val pageTitle_en_US_SettingsAppearance = "GLaDOS Settings: Appearance"
+const val pageTitle_ru_RU_SettingsAppearance = "Настройки GLaDOS: Внешний вид"
+const val pageTitle_ua_UA_SettingsAppearance = "Налаштування GLaDOS: Зовнішній вигляд"
 const val labelTitle_en_US_SettingsAppearance = "Appearance"
+const val labelTitle_ru_RU_SettingsAppearance = "Внешний вид"
+const val labelTitle_ua_UA_SettingsAppearance = "Зовнішній вигляд"
