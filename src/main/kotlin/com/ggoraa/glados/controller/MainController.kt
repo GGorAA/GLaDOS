@@ -8,15 +8,17 @@ import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.ui.set
 import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.RequestParam
 
 
 @Controller
 class MainController {
     @GetMapping("/")
-    fun displayHome(model: Model): String {
+    fun displayHome(@RequestParam(value = "count", required = false, defaultValue = "1") count: Int,
+                    model: Model): String {
         var ReturnPage = ""
         if (!passedOOBE) {
-            ReturnPage = "setup/start"
+            ReturnPage = "setup/goToOOBE"
         } else {
             var PageTitle = ""
             ReturnPage = "mainScreen"

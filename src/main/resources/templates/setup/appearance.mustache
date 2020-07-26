@@ -1,0 +1,77 @@
+<html>
+<head>
+    <title>GLaDOS Setup: GPIO</title>
+</head>
+<body>
+<div class="content">
+    <h1 class="main-header">{{main_header}}</h1>
+    <h3 class="secondary-header">{{secondary_header}}</h3>
+    <br>
+    <div id="setup" class="setup">
+
+    </div>
+    <div class="end-buttons">
+        <div class="buttons_wrapper">
+            <button id="set_defaults"><a>{{set_defaults_button}}</a></button>
+            <button id="done"><a href="">{{done_button}}</a></button>
+        </div>
+    </div>
+</div>
+<style>
+    h1.main-header {
+        font-family: 'Montserrat', sans-serif;
+        text-align: left;
+    }
+    div.end-buttons {
+        width: 100%;
+    }
+    div.buttons_wrapper {
+        text-align: end;
+    }
+    button {
+        border-radius: 5px;
+        border: none;
+        background-color: #f8f8f8;
+        margin: 20px 10px 10px;
+        padding: 10px;
+        transition-duration: 100ms;
+        box-shadow: 0 10px 10px rgba(69, 69, 69, 0.44);
+        font-family: 'Montserrat', sans-serif;
+    }
+    button:active {
+        border-radius: 5px;
+        border: none;
+        background-color: #848484;
+        margin: 10px;
+        padding: 10px;
+        transition-duration: 100ms;
+        box-shadow: 0 5px 5px rgba(69, 69, 69, 0.44);
+        font-family: 'Montserrat', sans-serif;
+    }
+    h3.secondary-header {
+        font-family: 'Montserrat', sans-serif;
+        text-align: left;
+    }
+    a {
+        font-family: 'Montserrat', sans-serif;
+        color: black;
+        margin: 10px;
+        text-decoration: none;
+    }
+    div.setup {
+        background-color: rgba(255, 241, 49, 0.34);
+        padding-top: 50px;
+        padding-left: 10px;
+        padding-bottom: 50px;
+        border-radius: 20px;
+    }
+    div.content {
+        margin: 100px auto 0;
+        width: 550px;
+        padding: 50px;
+        background-color: rgba(255, 245, 58, 0.6);
+        border-radius: 20px;
+    }
+</style>
+</body>
+</html>
