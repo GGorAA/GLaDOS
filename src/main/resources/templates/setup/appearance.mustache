@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
 <head>
     <title>GLaDOS Setup: GPIO</title>
 </head>
@@ -8,16 +8,46 @@
     <h3 class="secondary-header">{{secondary_header}}</h3>
     <br>
     <div id="setup" class="setup">
-
+        <div class="setup-content">
+            <div class="variant theme1">
+                <a href="/"><img src="illustrations/Tissue.png" alt=""></a>
+                <h2>{{theme_light}}</h2>
+            </div>
+            <div class="variant theme2">
+                <img src="illustrations/Tissue.png" alt="">
+                <h2>{{theme_dark}}</h2>
+            </div>
+            <div class="variant theme3">
+                <img src="illustrations/Tissue.png" alt="">
+                <h2>{{theme_system}}</h2>
+            </div>
+        </div>
     </div>
     <div class="end-buttons">
         <div class="buttons_wrapper">
-            <button id="set_defaults"><a>{{set_defaults_button}}</a></button>
             <button id="done"><a href="">{{done_button}}</a></button>
         </div>
     </div>
 </div>
 <style>
+    h2 {
+        font-family: 'Montserrat', sans-serif;
+    }
+    div.setup-content {
+        text-align: center;
+    }
+    div.variant {
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 20px;
+        border: none;
+        margin: 20px;
+        padding: 20px;
+        display: inline-block;
+    }
+    img {
+        width: 150px;
+        height: 150px;
+    }
     h1.main-header {
         font-family: 'Montserrat', sans-serif;
         text-align: left;
@@ -67,7 +97,7 @@
     }
     div.content {
         margin: 100px auto 0;
-        width: 550px;
+        width: 800px;
         padding: 50px;
         background-color: rgba(255, 245, 58, 0.6);
         border-radius: 20px;

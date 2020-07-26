@@ -20,7 +20,10 @@ class OOBEController {
         var ReturnPage = ""
         var MainHeader = ""
         var SecondaryHeader = ""
-
+        var SetDefaultsButton = ""
+        var ThemeLight = ""
+        var ThemeDark = ""
+        var ThemeSystem = ""
         var DoneButton = ""
         if (passedOOBE) {
             ReturnPage = "errors/OOBEIsPassed"
@@ -31,7 +34,6 @@ class OOBEController {
                 }
                 2 -> {
                     ReturnPage = "setup/gpio"
-                    var SetDefaultsButton = ""
                     when (defaultLanguage) {
                         "en_US" -> {
                             MainHeader = "Let's setup GPIO."
@@ -58,8 +60,31 @@ class OOBEController {
                     model["done_button"] = DoneButton
                 }
                 3 -> {
+                    when (defaultLanguage) {
+                        "en_US" -> {
+                            MainHeader = "Now let's setup your appearance."
+                            SecondaryHeader = "Select your color theme."
+                            ThemeLight = "Light"
+                            ThemeDark = "Dark"
+                            ThemeSystem = "System default"
+                            DoneButton = "Done"
+                        }
+                        "ru_RU" -> {
+                            MainHeader = "Теперь давайте настроим внешний вид."
+                            SecondaryHeader = "Выберите свою цветовую тему."
+                            ThemeLight = "Светлая"
+                            ThemeDark = "Темная"
+                            ThemeSystem = "Системная"
+                            DoneButton = "Готово"
+                        }
+                    }
                     ReturnPage = "setup/appearance"
-
+                    model["main_header"] = MainHeader
+                    model["secondary_header"] = SecondaryHeader
+                    model["theme_light"] = ThemeLight
+                    model["theme_dark"] = ThemeDark
+                    model["theme_system"] = ThemeSystem
+                    model["done_button"] = DoneButton
                 }
             }
         }
