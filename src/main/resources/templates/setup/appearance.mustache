@@ -1,3 +1,4 @@
+<!--suppress ALL -->
 <html lang="en">
 <head>
     <title>GLaDOS Setup: GPIO</title>
@@ -7,20 +8,20 @@
 <body>
 <div id="mainContent" class="content">
     <a href="/oobe?page=2"><span class="back">{{back-button}}</span></a>
-    <h1 class="main-header">{{main_header}}</h1>
+    <h1 id="text" class="main-header">{{main_header}}</h1>
     <h3 class="secondary-header">{{secondary_header}}</h3>
     <br>
     <div id="setup" class="setup">
         <div class="setup-content">
-            <div class="variant theme1">
+            <div id="theme1" class="variant theme1">
                 <!--<a href="">--><img onclick="toggleLightMode()" src="illustrations/lightThemeIcon.svg" alt=""><!--</a>-->
                 <h2>{{theme_light}}</h2>
             </div>
-            <div class="variant theme2">
+            <div id="theme2" class="variant theme2">
                 <img onclick="toggleDarkMode()" src="illustrations/darkThemeIcon.svg" alt="">
                 <h2>{{theme_dark}}</h2>
             </div>
-            <div class="variant theme3">
+            <div id="theme3" class="variant theme3">
                 <img src="illustrations/systemThemeIcon.svg" alt="">
                 <h2>{{theme_system}}</h2>
             </div>
@@ -50,18 +51,35 @@
         background-color: #848046;
         transition-duration: 500ms;
     }
-    span.dark {
+    div.theme1.dark {
+        background-color: #848046;
+        transition-duration: 500ms;
+    }
+    div.theme2.dark {
+        background-color: #848046;
+        transition-duration: 500ms;
+    }
+    div.theme3.dark {
+        background-color: #848046;
+        transition-duration: 500ms;
+    }
+    h1.dark {
         color: white;
         transition-duration: 500ms;
     }
     h3.dark {
         color: rgba(174,174,174,0.57);
+        transition-duration: 500ms;
     }
     h2.dark {
         color: white;
+        transition-duration: 500ms;
     }
     /* Light mode */
     body {
+        transition-duration: 500ms;
+    }
+    h1 {
         transition-duration: 500ms;
     }
     span.back {
@@ -160,15 +178,19 @@
 
     let bodyElement = document.body;
     let mainContentElement = document.getElementById("mainContent");
-    let setupElement = document.getElementById("setup")
-    let variantElement = document.getElementsByClassName("variant")
+    let setupElement = document.getElementById("setup");
+    let variant1Element = document.getElementById("theme1");
+    let variant2Element = document.getElementById("theme2");
+    let variant3Element = document.getElementById("theme3");
 
     function toggleDarkMode() {
         if (clickedDark === false) {
             bodyElement.classList.toggle("dark");
             mainContentElement.classList.toggle("dark");
             setupElement.classList.toggle("dark");
-            variantElement.classList.toggle("dark");
+            variant1Element.classList.toggle("dark");
+            variant2Element.classList.toggle("dark");
+            variant3Element.classList.toggle("dark");
             clickedDark = true;
             clickedLight = false;
         }
@@ -178,7 +200,9 @@
             bodyElement.classList.toggle("dark");
             mainContentElement.classList.toggle("dark");
             setupElement.classList.toggle("dark");
-            variantElement.classList.toggle("dark");
+            variant1Element.classList.toggle("dark");
+            variant2Element.classList.toggle("dark");
+            variant3Element.classList.toggle("dark");
             clickedLight = true;
             clickedDark = false;
         }
