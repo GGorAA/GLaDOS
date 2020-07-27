@@ -1,0 +1,42 @@
+<svg width="488" height="424" viewBox="0 0 488 424" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d)">
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="16" y="14" width="226" height="384">
+<rect x="16" y="14" width="226" height="384" fill="#C4C4C4"/>
+</mask>
+<g mask="url(#mask0)">
+<rect x="18" y="14" width="448" height="384" rx="61" fill="black"/>
+<rect x="101" y="105" width="283" height="241" rx="28" fill="#595959"/>
+<rect x="27" y="23" width="430" height="366" rx="52" stroke="#8A8A8A" stroke-width="18"/>
+<circle cx="69" cy="349" r="15" fill="#E8EC32"/>
+<rect x="42" y="291.495" width="20" height="15" rx="7.5" fill="#404040"/>
+<rect x="76" y="291.495" width="20" height="15" rx="7.5" fill="#404040"/>
+<rect x="61.1045" y="292" width="20" height="15" rx="7.5" transform="rotate(-90 61.1045 292)" fill="#404040"/>
+<rect x="61.8958" y="325.991" width="20" height="15" rx="7.5" transform="rotate(-90 61.8958 325.991)" fill="#404040"/>
+</g>
+<mask id="mask1" mask-type="alpha" maskUnits="userSpaceOnUse" x="242" y="14" width="226" height="384">
+<rect x="242" y="14" width="226" height="384" fill="#C4C4C4"/>
+</mask>
+<g mask="url(#mask1)">
+<rect x="18" y="14" width="448" height="384" rx="61" fill="white"/>
+<rect x="101" y="105" width="283" height="241" rx="28" fill="#C4C4C4"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M387.5 83.5131L407 94.3463L426.5 83.5131V62.4869L407 51.6536L387.5 62.4869V83.5131ZM407 40.5L377.75 56.75V89.25L407 105.5L436.25 89.25V56.75L407 40.5Z" fill="black"/>
+<rect x="27" y="23" width="430" height="366" rx="52" stroke="#8A8A8A" stroke-width="18"/>
+<circle cx="415" cy="349" r="15" fill="#E8EC32"/>
+<rect x="388" y="291.495" width="20" height="15" rx="7.5" fill="#C4C4C4"/>
+<rect x="422" y="291.495" width="20" height="15" rx="7.5" fill="#C4C4C4"/>
+<rect x="407.104" y="292" width="20" height="15" rx="7.5" transform="rotate(-90 407.104 292)" fill="#C4C4C4"/>
+<rect x="407.896" y="325.991" width="20" height="15" rx="7.5" transform="rotate(-90 407.896 325.991)" fill="#C4C4C4"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_d" x="0" y="0" width="488" height="424" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset dx="2" dy="6"/>
+<feGaussianBlur stdDeviation="10"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+</defs>
+</svg>

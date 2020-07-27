@@ -24,6 +24,7 @@ class OOBEController {
         var ThemeLight = ""
         var ThemeDark = ""
         var ThemeSystem = ""
+        var BackButton = ""
         var DoneButton = ""
         if (passedOOBE) {
             ReturnPage = "errors/OOBEIsPassed"
@@ -39,6 +40,7 @@ class OOBEController {
                             MainHeader = "Let's setup GPIO."
                             SecondaryHeader = "Write in every field your GPIO numbers. If you followed build tutorial at wiring part, you can click 'Set defaults' button."
                             SetDefaultsButton = "Set defaults"
+                            BackButton = "Back"
                             DoneButton = "Done"
                         }
                         "ru_RU" -> {
@@ -51,15 +53,18 @@ class OOBEController {
                             MainHeader = "Давайте налаштуємо виходи GPIO."
                             SecondaryHeader = "Запишіть в кожне поле свій номер GPIO. Якщо ви повністю слідували інструкціЇ по збірці в частині з підключенням компонентів, ви можете нажати кнопку 'Встановити стандартні'"
                             SetDefaultsButton = "Встановити стандартні"
+                            BackButton = "Назад"
                             DoneButton = "Готово"
                         }
                     }
                     model["main_header"] = MainHeader
                     model["secondary_header"] = SecondaryHeader
                     model["set_defaults_button"] = SetDefaultsButton
+                    model["back-button"] = BackButton
                     model["done_button"] = DoneButton
                 }
                 3 -> {
+                    ReturnPage = "setup/appearance"
                     when (defaultLanguage) {
                         "en_US" -> {
                             MainHeader = "Now let's setup your appearance."
@@ -67,6 +72,7 @@ class OOBEController {
                             ThemeLight = "Light"
                             ThemeDark = "Dark"
                             ThemeSystem = "System default"
+                            BackButton = "Back"
                             DoneButton = "Done"
                         }
                         "ru_RU" -> {
@@ -75,15 +81,16 @@ class OOBEController {
                             ThemeLight = "Светлая"
                             ThemeDark = "Темная"
                             ThemeSystem = "Системная"
+                            BackButton = "Назад"
                             DoneButton = "Готово"
                         }
                     }
-                    ReturnPage = "setup/appearance"
                     model["main_header"] = MainHeader
                     model["secondary_header"] = SecondaryHeader
                     model["theme_light"] = ThemeLight
                     model["theme_dark"] = ThemeDark
                     model["theme_system"] = ThemeSystem
+                    model["back-button"] = BackButton
                     model["done_button"] = DoneButton
                 }
             }

@@ -1,24 +1,27 @@
 <html lang="en">
 <head>
     <title>GLaDOS Setup: GPIO</title>
+    <link rel="icon" href="icons/favicon.png" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="content">
+    <a href="/oobe?page=2"><span class="back">{{back-button}}</span></a>
     <h1 class="main-header">{{main_header}}</h1>
     <h3 class="secondary-header">{{secondary_header}}</h3>
     <br>
     <div id="setup" class="setup">
         <div class="setup-content">
             <div class="variant theme1">
-                <a href="/"><img src="illustrations/Tissue.png" alt=""></a>
+                <a href="/"><img src="illustrations/lightThemeIcon.svg" alt=""></a>
                 <h2>{{theme_light}}</h2>
             </div>
             <div class="variant theme2">
-                <img src="illustrations/Tissue.png" alt="">
+                <img src="illustrations/darkThemeIcon.svg" alt="">
                 <h2>{{theme_dark}}</h2>
             </div>
             <div class="variant theme3">
-                <img src="illustrations/Tissue.png" alt="">
+                <img src="illustrations/systemThemeIcon.svg" alt="">
                 <h2>{{theme_system}}</h2>
             </div>
         </div>
@@ -30,8 +33,19 @@
     </div>
 </div>
 <style>
+    span.back {
+        margin-top: -20px;
+        color: #505050;
+    }
+    span.back:hover {
+        color: #000000;
+    }
+    span.back:active {
+        color: #7a7a7a;
+    }
     h2 {
         font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
     }
     div.setup-content {
         text-align: center;
@@ -43,6 +57,7 @@
         margin: 20px;
         padding: 20px;
         display: inline-block;
+        box-shadow: 5px 9px 20px 0 #44444454;
     }
     img {
         width: 150px;
@@ -51,6 +66,7 @@
     h1.main-header {
         font-family: 'Montserrat', sans-serif;
         text-align: left;
+        font-weight: 500;
     }
     div.end-buttons {
         width: 100%;
@@ -72,7 +88,7 @@
         border-radius: 5px;
         border: none;
         background-color: #848484;
-        margin: 10px;
+        margin: 20px 10px 10px;
         padding: 10px;
         transition-duration: 100ms;
         box-shadow: 0 5px 5px rgba(69, 69, 69, 0.44);
@@ -81,6 +97,7 @@
     h3.secondary-header {
         font-family: 'Montserrat', sans-serif;
         text-align: left;
+        font-weight: 500;
     }
     a {
         font-family: 'Montserrat', sans-serif;
