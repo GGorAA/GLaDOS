@@ -1,3 +1,4 @@
+<!--suppress ALL -->
 <html lang="en">
 <head>
     <title>GLaDOS Setup: GPIO</title>
@@ -11,7 +12,10 @@
     <h3 class="secondary-header">{{secondary_header}}</h3>
     <br>
     <div id="setup" class="setup">
-
+        <div class="column column-inline">
+            <span class="column-text">Base turn</span>
+            <input aria-labelledby="baseTurnInputLabel" id="baseTurnInput" placeholder="GPIO number">
+        </div>
     </div>
     <div class="end-buttons">
         <div class="buttons_wrapper">
@@ -21,6 +25,16 @@
     </div>
 </div>
 <style>
+    div.column {
+        margin-left: 20px;
+        margin: 10px;
+    }
+    input {
+        margin-left: 50px;
+    }
+    span {
+        font-family: 'Montserrat', sans-serif;
+    }
     span.back {
         margin-top: -20px;
         color: #505050;

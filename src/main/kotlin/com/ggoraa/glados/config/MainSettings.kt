@@ -5,6 +5,6 @@ package com.ggoraa.glados.config
  */
 
 val debugMode = false
-val defaultLanguage = "en_US"
+val defaultLanguage = "ru_RU"
 val defaultColorTheme = "light"
 val passedOOBE = false
