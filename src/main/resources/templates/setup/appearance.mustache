@@ -14,15 +14,15 @@
         <div class="setup-content">
             <div id="theme1" class="variant theme1">
                 <!--<a href="">--><img onclick="toggleLightMode()" src="illustrations/lightThemeIcon.svg" alt=""><!--</a>-->
-                <h2>{{theme_light}}</h2>
+                <h2 id="text2" class="">{{theme_light}}</h2>
             </div>
             <div id="theme2" class="variant theme2">
                 <img onclick="toggleDarkMode()" src="illustrations/darkThemeIcon.svg" alt="">
-                <h2>{{theme_dark}}</h2>
+                <h2 id="text3" class="">{{theme_dark}}</h2>
             </div>
             <div id="theme3" class="variant theme3">
                 <img src="illustrations/systemThemeIcon.svg" alt="">
-                <h2>{{theme_system}}</h2>
+                <h2 id="text4" class="">{{theme_system}}</h2>
             </div>
         </div>
     </div>
@@ -37,50 +37,50 @@
     /* Dark mode */
     body.dark {
         background-color: #404040;
-        transition-duration: 500ms;
+        transition-duration: 1000ms;
     }
     div.content.dark {
         background-color: #65622f;
-        transition-duration: 500ms;
+        transition-duration: 1000ms;
     }
     div.setup.dark {
         background-color: #575a24;
-        transition-duration: 500ms;
+        transition-duration: 1000ms;
     }
     div.variant.dark {
         background-color: #848046;
-        transition-duration: 500ms;
+        transition-duration: 1000ms;
     }
     div.theme1.dark {
         background-color: #848046;
-        transition-duration: 500ms;
+        transition-duration: 1000ms;
     }
     div.theme2.dark {
         background-color: #848046;
-        transition-duration: 500ms;
+        transition-duration: 1000ms;
     }
     div.theme3.dark {
         background-color: #848046;
-        transition-duration: 500ms;
+        transition-duration: 1000ms;
     }
     h1.dark {
         color: white;
-        transition-duration: 500ms;
+        transition-duration: 1000ms;
     }
     h3.dark {
         color: rgba(174,174,174,0.57);
-        transition-duration: 500ms;
+        transition-duration: 1000ms;
     }
     h2.dark {
         color: white;
-        transition-duration: 500ms;
+        transition-duration: 1000ms;
     }
     /* Light mode */
     body {
-        transition-duration: 500ms;
+        transition-duration: 1000ms;
     }
     h1 {
-        transition-duration: 500ms;
+        transition-duration: 1000ms;
     }
     span.back {
         margin-top: -20px;
@@ -107,7 +107,7 @@
         padding: 20px;
         display: inline-block;
         box-shadow: 5px 9px 20px 0 #44444454;
-        transition-duration: 500ms;
+        transition-duration: 1000ms;
     }
     img {
         width: 150px;
@@ -148,6 +148,7 @@
         font-family: 'Montserrat', sans-serif;
         text-align: left;
         font-weight: 500;
+        transition-duration: 1000ms;
     }
     a {
         font-family: 'Montserrat', sans-serif;
@@ -161,7 +162,7 @@
         padding-left: 10px;
         padding-bottom: 50px;
         border-radius: 20px;
-        transition-duration: 500ms;
+        transition-duration: 1000ms;
     }
     div.content {
         margin: 100px auto 0;
@@ -169,7 +170,7 @@
         padding: 50px;
         background-color: #FFF994;
         border-radius: 20px;
-        transition-duration: 500ms;
+        transition-duration: 1000ms;
     }
 </style>
 <script>
@@ -182,6 +183,10 @@
     let variant1Element = document.getElementById("theme1");
     let variant2Element = document.getElementById("theme2");
     let variant3Element = document.getElementById("theme3");
+    //let textElement = document.getElementById("text");
+    //let text1Element = document.getElementById("text1");
+    //let text2Element = document.getElementById("text2");
+    //let text3Element = document.getElementById("text3");
 
     function toggleDarkMode() {
         if (clickedDark === false) {
@@ -191,7 +196,11 @@
             variant1Element.classList.toggle("dark");
             variant2Element.classList.toggle("dark");
             variant3Element.classList.toggle("dark");
-            clickedDark = true;
+            //textElement.classList.toggle("dark");
+            //text1Element.classList.toggle("dark");
+            //text2Element.classList.toggle("dark");
+            //text3Element.classList.toggle("dark");
+            //clickedDark = true;
             clickedLight = false;
         }
     }
@@ -203,6 +212,10 @@
             variant1Element.classList.toggle("dark");
             variant2Element.classList.toggle("dark");
             variant3Element.classList.toggle("dark");
+            //textElement.classList.toggle("dark");
+            //text1Element.classList.toggle("dark");
+            //text2Element.classList.toggle("dark");
+            //text3Element.classList.toggle("dark");
             clickedLight = true;
             clickedDark = false;
         }
