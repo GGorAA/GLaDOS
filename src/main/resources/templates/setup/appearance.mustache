@@ -5,7 +5,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="content">
+<div id="mainContent" class="content">
     <a href="/oobe?page=2"><span class="back">{{back-button}}</span></a>
     <h1 class="main-header">{{main_header}}</h1>
     <h3 class="secondary-header">{{secondary_header}}</h3>
@@ -13,11 +13,11 @@
     <div id="setup" class="setup">
         <div class="setup-content">
             <div class="variant theme1">
-                <a href="/"><img src="illustrations/lightThemeIcon.svg" alt=""></a>
+                <!--<a href="">--><img onclick="toggleLightMode()" src="illustrations/lightThemeIcon.svg" alt=""><!--</a>-->
                 <h2>{{theme_light}}</h2>
             </div>
             <div class="variant theme2">
-                <img src="illustrations/darkThemeIcon.svg" alt="">
+                <img onclick="toggleDarkMode()" src="illustrations/darkThemeIcon.svg" alt="">
                 <h2>{{theme_dark}}</h2>
             </div>
             <div class="variant theme3">
@@ -33,6 +33,37 @@
     </div>
 </div>
 <style>
+    /* Dark mode */
+    body.dark {
+        background-color: #404040;
+        transition-duration: 500ms;
+    }
+    div.content.dark {
+        background-color: #65622f;
+        transition-duration: 500ms;
+    }
+    div.setup.dark {
+        background-color: #575a24;
+        transition-duration: 500ms;
+    }
+    div.variant.dark {
+        background-color: #848046;
+        transition-duration: 500ms;
+    }
+    span.dark {
+        color: white;
+        transition-duration: 500ms;
+    }
+    h3.dark {
+        color: rgba(174,174,174,0.57);
+    }
+    h2.dark {
+        color: white;
+    }
+    /* Light mode */
+    body {
+        transition-duration: 500ms;
+    }
     span.back {
         margin-top: -20px;
         color: #505050;
@@ -51,13 +82,14 @@
         text-align: center;
     }
     div.variant {
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: #FFFBBE;
         border-radius: 20px;
         border: none;
         margin: 20px;
         padding: 20px;
         display: inline-block;
         box-shadow: 5px 9px 20px 0 #44444454;
+        transition-duration: 500ms;
     }
     img {
         width: 150px;
@@ -106,19 +138,51 @@
         text-decoration: none;
     }
     div.setup {
-        background-color: rgba(255, 241, 49, 0.34);
+        background-color: #FFF678;
         padding-top: 50px;
         padding-left: 10px;
         padding-bottom: 50px;
         border-radius: 20px;
+        transition-duration: 500ms;
     }
     div.content {
         margin: 100px auto 0;
         width: 800px;
         padding: 50px;
-        background-color: rgba(255, 245, 58, 0.6);
+        background-color: #FFF994;
         border-radius: 20px;
+        transition-duration: 500ms;
     }
 </style>
+<script>
+    let clickedLight = true;
+    let clickedDark = false;
+
+    let bodyElement = document.body;
+    let mainContentElement = document.getElementById("mainContent");
+    let setupElement = document.getElementById("setup")
+    let variantElement = document.getElementsByClassName("variant")
+
+    function toggleDarkMode() {
+        if (clickedDark === false) {
+            bodyElement.classList.toggle("dark");
+            mainContentElement.classList.toggle("dark");
+            setupElement.classList.toggle("dark");
+            variantElement.classList.toggle("dark");
+            clickedDark = true;
+            clickedLight = false;
+        }
+    }
+    function toggleLightMode() {
+        if (clickedLight === false) {
+            bodyElement.classList.toggle("dark");
+            mainContentElement.classList.toggle("dark");
+            setupElement.classList.toggle("dark");
+            variantElement.classList.toggle("dark");
+            clickedLight = true;
+            clickedDark = false;
+        }
+    }
+</script>
 </body>
 </html>

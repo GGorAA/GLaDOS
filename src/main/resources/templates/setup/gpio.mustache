@@ -16,6 +16,18 @@
             <span class="column-text">Base turn</span>
             <input aria-labelledby="baseTurnInputLabel" id="baseTurnInput" placeholder="GPIO number">
         </div>
+        <div class="column column-inline">
+            <span class="column-text">Base tilt side</span>
+            <input aria-labelledby="baseTurnInputLabel" id="baseTurnInput" placeholder="GPIO number">
+        </div>
+        <div class="column column-inline">
+            <span class="column-text">Base tilt forward</span>
+            <input aria-labelledby="baseTurnInputLabel" id="baseTurnInput" placeholder="GPIO number">
+        </div>
+        <div class="column column-inline">
+            <span class="column-text">Arm bend</span>
+            <input aria-labelledby="baseTurnInputLabel" id="baseTurnInput" placeholder="GPIO number">
+        </div>
     </div>
     <div class="end-buttons">
         <div class="buttons_wrapper">
@@ -25,12 +37,20 @@
     </div>
 </div>
 <style>
+    span.column-text {
+    }
     div.column {
         margin-left: 20px;
         margin: 10px;
     }
     input {
-        margin-left: 50px;
+        border-radius: 5px;
+        height: 30px;
+        border: 0;
+        margin-left: 150px;
+        text-align: start;
+        padding-left: 10px;
+        box-shadow: 1px 10px 20px -5px rgba(69, 69, 69, 0.44);
     }
     span {
         font-family: 'Montserrat', sans-serif;
