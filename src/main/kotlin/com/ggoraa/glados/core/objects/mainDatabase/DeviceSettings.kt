@@ -1,8 +1,8 @@
-package com.ggoraa.glados.core.`object`
+package com.ggoraa.glados.core.objects.mainDatabase
 
 import org.jetbrains.exposed.dao.id.IntIdTable
 
-object mainDatabase_deviceSettings : IntIdTable() {
+object DeviceSettings : IntIdTable() {
     val name = text("name")
     val GPIO = integer("gpio")
     val state = integer("state")

@@ -1,4 +1,4 @@
-package com.ggoraa.glados.controller
+package com.ggoraa.glados.controller.ui
 
 
 import com.ggoraa.glados.config.defaultLanguage
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam
 
 
 @Controller
-class MainController {
+class UIController {
     @GetMapping("/")
     fun displayHome(@RequestParam(value = "count", required = false, defaultValue = "1") count: Int,
                     model: Model): String {

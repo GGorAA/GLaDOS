@@ -35,12 +35,12 @@ dependencies {
     implementation("org.jetbrains.exposed", "exposed-core", "0.24.1")
     implementation("org.jetbrains.exposed", "exposed-dao", "0.24.1")
     implementation("org.jetbrains.exposed", "exposed-jdbc", "0.24.1")
+    implementation("org.jetbrains.exposed", "exposed-java-time", "0.24.1")
     // SQLite dependency
     implementation("org.xerial:sqlite-jdbc:3.30.1")
     // kotlinx.html dependencies
     implementation(kotlin("stdlib-js"))
     implementation("org.jetbrains.kotlinx:kotlinx-html-js:0.7.1")
-
 }
 
 tasks.withType<Test> {

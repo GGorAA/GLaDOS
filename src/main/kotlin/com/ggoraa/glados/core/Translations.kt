@@ -1,5 +1,23 @@
 package com.ggoraa.glados.core
 
+import org.jetbrains.exposed.sql.Database
+import org.jetbrains.exposed.sql.transactions.transaction
+
+// This file is used for translations.
+// Values are generated using SQLite database.
+// The refreshTranslations() function is used to fetch new data from database and create values for database. Typically used on startup and when changing values on-the-fly.
+
+val db = Database.connect("jdbc:sqlite:/Users/egoryakovenko/Documents/GitHub/GLaDOS/databases/main.sqlite", "org.sqlite.JDBC")
+
+fun refreshTranslations() {
+
+}
+
+fun getTranslationString(text: String, lang: String) {
+    transaction(db) {
+
+    }
+}
 // Homepage
 const val pageTitle_en_US_Homepage = "GLaDOS Control Panel"
 const val pageTitle_ru_RU_Homepage = "Панель управления GLaDOS"
