@@ -6,23 +6,23 @@
 </head>
 <body>
 <div id="mainContent" class="content">
-    <a href="/oobe?page=2"><span class="back">{{back-button}}</span></a>
-    <h1 id="text" class="main-header">{{main_header}}</h1>
-    <h3 class="secondary-header">{{secondary_header}}</h3>
+    <a href="/oobe?page=2"><span id="back-button" class="back">{{back-button}}</span></a>
+    <h1 id="text0" class="main-header">{{main_header}}</h1>
+    <h3 id="secondary-text" class="secondary-header">{{secondary_header}}</h3>
     <br>
     <div id="setup" class="setup">
         <div class="setup-content">
             <div id="theme1" class="variant theme1">
                 <!--<a href="">--><img onclick="toggleLightMode()" src="illustrations/lightThemeIcon.svg" alt=""><!--</a>-->
-                <h2 id="text2" class="">{{theme_light}}</h2>
+                <h2 id="text1" class="variant-text">{{theme_light}}</h2>
             </div>
             <div id="theme2" class="variant theme2">
                 <img onclick="toggleDarkMode()" src="illustrations/darkThemeIcon.svg" alt="">
-                <h2 id="text3" class="">{{theme_dark}}</h2>
+                <h2 id="text2" class="variant-text">{{theme_dark}}</h2>
             </div>
             <div id="theme3" class="variant theme3">
                 <img src="illustrations/systemThemeIcon.svg" alt="">
-                <h2 id="text4" class="">{{theme_system}}</h2>
+                <h2 id="text3" class="variant-text">{{theme_system}}</h2>
             </div>
         </div>
     </div>
@@ -36,8 +36,15 @@
 <style>
     /* Dark mode */
     body.dark {
-        background-color: #404040;
+        background-color: #000000;
         transition-duration: 1000ms;
+    }
+    span.back.dark {
+        color: #9a9a9a;
+        transition-duration: 1000ms;
+    }
+    span.back.dark:active {
+        color: #ffffff;
     }
     div.content.dark {
         background-color: #65622f;
@@ -68,7 +75,7 @@
         transition-duration: 1000ms;
     }
     h3.dark {
-        color: rgba(174,174,174,0.57);
+        color: #cacaca;
         transition-duration: 1000ms;
     }
     h2.dark {
@@ -85,6 +92,7 @@
     span.back {
         margin-top: -20px;
         color: #505050;
+        transition-duration: 1000ms;
     }
     span.back:hover {
         color: #000000;
@@ -95,6 +103,7 @@
     h2 {
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
+        transition-duration: 1000ms;
     }
     div.setup-content {
         text-align: center;
@@ -183,10 +192,14 @@
     let variant1Element = document.getElementById("theme1");
     let variant2Element = document.getElementById("theme2");
     let variant3Element = document.getElementById("theme3");
-    //let textElement = document.getElementById("text");
-    //let text1Element = document.getElementById("text1");
-    //let text2Element = document.getElementById("text2");
-    //let text3Element = document.getElementById("text3");
+
+    let backButtonElement = document.getElementById("back-button");
+
+    let textElement = document.getElementById("text1");
+    let secondaryTextElement = document.getElementById("secondary-text");
+    let text0Element = document.getElementById("text0");
+    let text2Element = document.getElementById("text2");
+    let text3Element = document.getElementById("text3");
 
     function toggleDarkMode() {
         if (clickedDark === false) {
@@ -196,11 +209,13 @@
             variant1Element.classList.toggle("dark");
             variant2Element.classList.toggle("dark");
             variant3Element.classList.toggle("dark");
-            //textElement.classList.toggle("dark");
-            //text1Element.classList.toggle("dark");
-            //text2Element.classList.toggle("dark");
-            //text3Element.classList.toggle("dark");
-            //clickedDark = true;
+            secondaryTextElement.classList.toggle("dark");
+            backButtonElement.classList.toggle("dark");
+            textElement.classList.toggle("dark");
+            text0Element.classList.toggle("dark");
+            text2Element.classList.toggle("dark");
+            text3Element.classList.toggle("dark");
+            clickedDark = true;
             clickedLight = false;
         }
     }
@@ -212,10 +227,12 @@
             variant1Element.classList.toggle("dark");
             variant2Element.classList.toggle("dark");
             variant3Element.classList.toggle("dark");
-            //textElement.classList.toggle("dark");
-            //text1Element.classList.toggle("dark");
-            //text2Element.classList.toggle("dark");
-            //text3Element.classList.toggle("dark");
+            secondaryTextElement.classList.toggle("dark");
+            backButtonElement.classList.toggle("dark");
+            textElement.classList.toggle("dark");
+            text0Element.classList.toggle("dark");
+            text2Element.classList.toggle("dark");
+            text3Element.classList.toggle("dark");
             clickedLight = true;
             clickedDark = false;
         }
