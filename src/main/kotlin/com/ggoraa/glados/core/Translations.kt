@@ -1,6 +1,11 @@
+@file:Suppress("FunctionName", "ClassName")
+
 package com.ggoraa.glados.core
 
+import com.ggoraa.glados.core.objects.mainDatabase.Translations
 import org.jetbrains.exposed.sql.Database
+import org.jetbrains.exposed.sql.Query
+import org.jetbrains.exposed.sql.select
 import org.jetbrains.exposed.sql.transactions.transaction
 
 // This file is used for translations.
@@ -8,48 +13,86 @@ import org.jetbrains.exposed.sql.transactions.transaction
 // The refreshTranslations() function is used to fetch new data from database and create values for database. Typically used on startup and when changing values on-the-fly.
 
 val db = Database.connect("jdbc:sqlite:/Users/egoryakovenko/Documents/GitHub/GLaDOS/databases/main.sqlite", "org.sqlite.JDBC")
+@Suppress("FunctionName")
 
-fun refreshTranslations() {
-
+fun getRu_RUString(text: String): Query {
+    return transaction(db) {
+        Translations.slice(Translations.ru_RU).select {
+            Translations.name eq text
+        }
+    }
 }
+fun getEn_USString(text: String): Query {
+    return transaction(db) {
+        Translations.slice(Translations.en_US).select {
+            Translations.name eq text
+        }
+    }
+}
+fun getUa_UAString(text: String) {
+    return transaction(db) {
+        Translations.slice(Translations.ua_UA).select {
+            Translations.name eq text
+        }
+    }
+}
+object Translations {
+    object en_US {
+        object Homepage {
+            val pageTitle = "GLaDOS Control Panel"
+        }
+        object Settings {
+            object Appearance {
+                val pageTitle = "GLaDOS Settings: Appearance"
+                val labelTitle = "Appearance"
+            }
+            val pageTitle = "GLaDOS Settings"
+            val statisticsLabel = "Statistics"
+            val sidebarLabel = "Settings"
+            val sidebarElementAppearance = "Appearance"
+            val sidebarElementGPIO = "GPIO"
+            val sidebarElementCamera = "Camera"
+            val sidebarElementAudio = "Audio"
+        }
+    }
+    object ru_RU {
+        object Homepage {
 
-fun getTranslationString(text: String, lang: String) {
-    transaction(db) {
+        }
+        object Settings {
+            object Appearance {
+                val labelTitle = "Внешний вид"
+            }
+        }
+        val pageTitle_Homepage = "Панель управления GLaDOS"
+        val pageTitle_Settings = "Настройки GLaDOS"
+        val statisticsLabel_Settings = "Статистика"
+        val sidebarLabel_Settings = "Настройки"
+        val sidebarElementAppearance_Settings = "Внешний вид"
+        val sidebarElementGPIO_Settings = "GPIO"
+        val sidebarElementCamera_Settings = "Камера"
+        val sidebarElementAudio_Settings = "Аудио"
+        val pageTitle_SettingsAppearance = "Настройки GLaDOS: Внешний вид"
+    }
+    object ua_UA {
+        object Homepage {
+            val pageTitle = "Панель Управління GLaDOS"
+        }
+        object Settings {
+            object Appearance {
+                val pageTitle = "Налаштування GLaDOS: Зовнішній вигляд"
+                val labelTitle = "Зовнішній вигляд"
+            }
+            val pageTitle = "Налаштування GLaDOS"
+            val statisticsLabel = "Статистика"
+            val sidebarLabel = "Налаштування"
+            val sidebarElementAppearance_Settings = "Зовнішній вигляд"
+            val sidebarElementGPIO_Settings = "GPIO"
+            val sidebarElementCamera_Settings = "Камера"
+            val sidebarElementAudio_Settings = "Аудіо"
+        }
+    }
+    fun refresh() {
 
     }
 }
-// Homepage
-const val pageTitle_en_US_Homepage = "GLaDOS Control Panel"
-const val pageTitle_ru_RU_Homepage = "Панель управления GLaDOS"
-const val pageTitle_ua_UA_Homepage = "Панель Управління GLaDOS"
-
-// Settings homepage
-const val pageTitle_en_US_Settings = "GLaDOS Settings"
-const val pageTitle_ru_RU_Settings = "Настройки GLaDOS"
-const val pageTitle_ua_UA_Settings = "Налаштування GLaDOS"
-const val statisticsLabel_en_US_Settings = "Statistics"
-const val statisticsLabel_ru_RU_Settings = "Статистика"
-const val statisticsLabel_ua_UA_Settings = "Статистика"
-// Settings sidebar
-const val sidebarLabel_en_US = "Settings"
-const val sidebarLabel_ru_RU = "Настройки"
-const val sidebarLabel_ua_UA = "Налаштування"
-const val sidebarElementAppearance_en_US = "Appearance"
-const val sidebarElementAppearance_ru_RU = "Внешний вид"
-const val sidebarElementAppearance_ua_UA = "Зовнішній вигляд"
-const val sidebarElementGPIO_en_US = "GPIO"
-const val sidebarElementGPIO_ru_RU = "GPIO"
-const val sidebarElementGPIO_ua_UA = "GPIO"
-const val sidebarElementCamera_en_US = "Camera"
-const val sidebarElementCamera_ru_RU = "Камера"
-const val sidebarElementCamera_ua_UA = "Камера"
-const val sidebarElementAudio_en_US = "Audio"
-const val sidebarElementAudio_ru_RU = "Аудио"
-const val sidebarElementAudio_ua_UA = "Аудіо"
-// Settings appearance page
-const val pageTitle_en_US_SettingsAppearance = "GLaDOS Settings: Appearance"
-const val pageTitle_ru_RU_SettingsAppearance = "Настройки GLaDOS: Внешний вид"
-const val pageTitle_ua_UA_SettingsAppearance = "Налаштування GLaDOS: Зовнішній вигляд"
-const val labelTitle_en_US_SettingsAppearance = "Appearance"
-const val labelTitle_ru_RU_SettingsAppearance = "Внешний вид"
-const val labelTitle_ua_UA_SettingsAppearance = "Зовнішній вигляд"

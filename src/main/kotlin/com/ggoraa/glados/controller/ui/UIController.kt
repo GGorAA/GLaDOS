@@ -24,13 +24,13 @@ class UIController {
             ReturnPage = "mainScreen"
             when (defaultLanguage) {
                 "en_US" -> {
-                    PageTitle = pageTitle_en_US_Homepage
+                    PageTitle = Translations.en_US.pageTitle_Homepage
                 }
                 "ru_RU" -> {
-                    PageTitle = pageTitle_ru_RU_Homepage
+                    PageTitle = Translations.ru_RU.pageTitle_Homepage
                 }
                 "ua_UA" -> {
-                    PageTitle = pageTitle_ua_UA_Homepage
+                    PageTitle = Translations.ua_UA.pageTitle_Homepage
                 }
                 else -> {
                     ReturnPage = "errorLang"
@@ -55,34 +55,34 @@ class UIController {
         var ReturnPage = "settingsScreen"
         when (defaultLanguage) {
             "en_US" -> {
-                pageTitle = pageTitle_en_US_Settings
-                statisticsLabel = statisticsLabel_en_US_Settings
-                sidebarLabel = sidebarLabel_en_US
-                sidebarElementAppearance = sidebarElementAppearance_en_US
-                sidebarElementGPIO = sidebarElementGPIO_en_US
+                pageTitle = Translations.en_US.pageTitle_Settings
+                statisticsLabel = Translations.en_US.statisticsLabel_Settings
+                sidebarLabel = Translations.en_US.sidebarLabel_Settings
+                sidebarElementAppearance = Translations.en_US.sidebarElementAppearance_Settings
+                sidebarElementGPIO = Translations.en_US.sidebarElementGPIO_Settings
                 sidebarElementCamera = sidebarElementCamera_en_US
                 sidebarElementAudio = sidebarElementAudio_en_US
                 sidebarWidthPx = "250"
                 contentPadding = "300"
             }
             "ru_RU" -> {
-                pageTitle = pageTitle_ru_RU_Settings
-                statisticsLabel = statisticsLabel_ru_RU_Settings
-                sidebarLabel = sidebarLabel_ru_RU
-                sidebarElementAppearance = sidebarElementAppearance_ru_RU
-                sidebarElementGPIO = sidebarElementGPIO_ru_RU
+                pageTitle = Translations.ru_RU.pageTitle_Settings
+                statisticsLabel = Translations.ru_RU.statisticsLabel_Settings
+                sidebarLabel = Translations.ru_RU.sidebarLabel_Settings
+                sidebarElementAppearance = Translations.ru_RU.sidebarElementAppearance_Settings
+                sidebarElementGPIO = Translations.ru_RU.sidebarElementGPIO_Settings
                 sidebarElementCamera = sidebarElementCamera_ru_RU
                 sidebarElementAudio = sidebarElementAudio_ru_RU
                 sidebarWidthPx = "350"
                 contentPadding = "400"
             }
             "ua_UA" -> {
-                pageTitle = pageTitle_ua_UA_Settings
-                statisticsLabel = statisticsLabel_ua_UA_Settings
-                sidebarLabel = sidebarLabel_ua_UA
-                sidebarElementAppearance = sidebarElementAppearance_ua_UA
-                sidebarElementGPIO = sidebarElementGPIO_ua_UA
-                sidebarElementCamera = sidebarElementCamera_ua_UA
+                pageTitle = Translations.ua_UA.Settings.pageTitle
+                statisticsLabel = Translations.ua_UA.Settings.statisticsLabel
+                sidebarLabel = Translations.ua_UA.Settings.sidebarLabel
+                sidebarElementAppearance = Translations.ua_UA.Settings.sidebarElementAppearance
+                sidebarElementGPIO = Translations.ua_UA.Settings.sidebarElementGPIO
+                sidebarElementCamera = Translations.ua_UA.Settings.sidebarElementCamera
                 sidebarElementAudio = sidebarElementAudio_ua_UA
                 sidebarWidthPx = "350"
                 contentPadding = "400"
