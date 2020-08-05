@@ -3,7 +3,7 @@ package com.ggoraa.glados.controller.ui
 
 import com.ggoraa.glados.config.defaultLanguage
 import com.ggoraa.glados.config.passedOOBE
-import com.ggoraa.glados.core.*
+import com.ggoraa.glados.core.Translations
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.ui.set
@@ -24,13 +24,13 @@ class UIController {
             ReturnPage = "mainScreen"
             when (defaultLanguage) {
                 "en_US" -> {
-                    PageTitle = Translations.en_US.pageTitle_Homepage
+                    PageTitle = Translations.en_US.Homepage.pageTitle
                 }
                 "ru_RU" -> {
-                    PageTitle = Translations.ru_RU.pageTitle_Homepage
+                    PageTitle = Translations.ru_RU.Homepage.pageTitle
                 }
                 "ua_UA" -> {
-                    PageTitle = Translations.ua_UA.pageTitle_Homepage
+                    PageTitle = Translations.ua_UA.Homepage.pageTitle
                 }
                 else -> {
                     ReturnPage = "errorLang"
@@ -55,24 +55,24 @@ class UIController {
         var ReturnPage = "settingsScreen"
         when (defaultLanguage) {
             "en_US" -> {
-                pageTitle = Translations.en_US.pageTitle_Settings
-                statisticsLabel = Translations.en_US.statisticsLabel_Settings
-                sidebarLabel = Translations.en_US.sidebarLabel_Settings
-                sidebarElementAppearance = Translations.en_US.sidebarElementAppearance_Settings
-                sidebarElementGPIO = Translations.en_US.sidebarElementGPIO_Settings
-                sidebarElementCamera = sidebarElementCamera_en_US
-                sidebarElementAudio = sidebarElementAudio_en_US
+                pageTitle = Translations.en_US.Settings.pageTitle
+                statisticsLabel = Translations.en_US.Settings.statisticsLabel
+                sidebarLabel = Translations.en_US.Settings.sidebarLabel
+                sidebarElementAppearance = Translations.en_US.Settings.sidebarElementAppearance
+                sidebarElementGPIO = Translations.en_US.Settings.sidebarElementGPIO
+                sidebarElementCamera = Translations.en_US.Settings.sidebarElementCamera
+                sidebarElementAudio = Translations.en_US.Settings.sidebarElementAudio
                 sidebarWidthPx = "250"
                 contentPadding = "300"
             }
             "ru_RU" -> {
-                pageTitle = Translations.ru_RU.pageTitle_Settings
-                statisticsLabel = Translations.ru_RU.statisticsLabel_Settings
-                sidebarLabel = Translations.ru_RU.sidebarLabel_Settings
-                sidebarElementAppearance = Translations.ru_RU.sidebarElementAppearance_Settings
-                sidebarElementGPIO = Translations.ru_RU.sidebarElementGPIO_Settings
-                sidebarElementCamera = sidebarElementCamera_ru_RU
-                sidebarElementAudio = sidebarElementAudio_ru_RU
+                pageTitle = Translations.ru_RU.Settings.pageTitle
+                statisticsLabel = Translations.ru_RU.Settings.statisticsLabel
+                sidebarLabel = Translations.ru_RU.Settings.sidebarLabel
+                sidebarElementAppearance = Translations.ru_RU.Settings.sidebarElementAppearance
+                sidebarElementGPIO = Translations.ru_RU.Settings.sidebarElementGPIO
+                sidebarElementCamera = Translations.ru_RU.Settings.sidebarElementCamera
+                sidebarElementAudio = Translations.ru_RU.Settings.sidebarElementAudio
                 sidebarWidthPx = "350"
                 contentPadding = "400"
             }
@@ -83,7 +83,7 @@ class UIController {
                 sidebarElementAppearance = Translations.ua_UA.Settings.sidebarElementAppearance
                 sidebarElementGPIO = Translations.ua_UA.Settings.sidebarElementGPIO
                 sidebarElementCamera = Translations.ua_UA.Settings.sidebarElementCamera
-                sidebarElementAudio = sidebarElementAudio_ua_UA
+                sidebarElementAudio = Translations.ua_UA.Settings.sidebarElementAudio
                 sidebarWidthPx = "350"
                 contentPadding = "400"
             }
@@ -122,8 +122,8 @@ class UIController {
         var returnPage = "settingsAppearanceScreen"
         when (defaultLanguage) {
             "en_US" -> {
-                pageTitle = pageTitle_en_US_SettingsAppearance
-                labelTitle = labelTitle_en_US_SettingsAppearance
+                pageTitle = Translations.en_US.Settings.Appearance.pageTitle
+                labelTitle = Translations.en_US.Settings.Appearance.labelTitle
                 themeSettingsLabel = "Theme"
                 themeSelectDefault = "System default"
                 themeSelectDark = "Dark"
@@ -138,8 +138,8 @@ class UIController {
                 contentPadding = "300"
             }
             "ru_RU" -> {
-                pageTitle = pageTitle_ru_RU_SettingsAppearance
-                labelTitle = labelTitle_ru_RU_SettingsAppearance
+                pageTitle = Translations.ru_RU.Settings.Appearance.pageTitle
+                labelTitle = Translations.ru_RU.Settings.Appearance.labelTitle
                 themeSettingsLabel = "Тема"
                 themeSelectDefault = "Системная"
                 themeSelectDark = "Темная"
@@ -154,8 +154,8 @@ class UIController {
                 contentPadding = "400"
             }
             "ua_UA" -> {
-                pageTitle = pageTitle_ua_UA_SettingsAppearance
-                labelTitle = labelTitle_ua_UA_SettingsAppearance
+                pageTitle = Translations.ua_UA.Settings.Appearance.pageTitle
+                labelTitle = Translations.ua_UA.Settings.Appearance.labelTitle
                 themeSettingsLabel = "Тема"
                 themeSelectDefault = "Системна"
                 themeSelectDark = "Темна"

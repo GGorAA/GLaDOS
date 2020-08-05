@@ -57,22 +57,21 @@ object Translations {
     }
     object ru_RU {
         object Homepage {
-
+            val pageTitle = "Панель управления GLaDOS"
         }
         object Settings {
             object Appearance {
+                val pageTitle = "Настройки GLaDOS: Внешний вид"
                 val labelTitle = "Внешний вид"
             }
+            val pageTitle = "Настройки GLaDOS"
+            val statisticsLabel = "Статистика"
+            val sidebarLabel = "Настройки"
+            val sidebarElementAppearance = "Внешний вид"
+            val sidebarElementGPIO = "GPIO"
+            val sidebarElementCamera = "Камера"
+            val sidebarElementAudio = "Аудио"
         }
-        val pageTitle_Homepage = "Панель управления GLaDOS"
-        val pageTitle_Settings = "Настройки GLaDOS"
-        val statisticsLabel_Settings = "Статистика"
-        val sidebarLabel_Settings = "Настройки"
-        val sidebarElementAppearance_Settings = "Внешний вид"
-        val sidebarElementGPIO_Settings = "GPIO"
-        val sidebarElementCamera_Settings = "Камера"
-        val sidebarElementAudio_Settings = "Аудио"
-        val pageTitle_SettingsAppearance = "Настройки GLaDOS: Внешний вид"
     }
     object ua_UA {
         object Homepage {
@@ -86,10 +85,10 @@ object Translations {
             val pageTitle = "Налаштування GLaDOS"
             val statisticsLabel = "Статистика"
             val sidebarLabel = "Налаштування"
-            val sidebarElementAppearance_Settings = "Зовнішній вигляд"
-            val sidebarElementGPIO_Settings = "GPIO"
-            val sidebarElementCamera_Settings = "Камера"
-            val sidebarElementAudio_Settings = "Аудіо"
+            val sidebarElementAppearance = "Зовнішній вигляд"
+            val sidebarElementGPIO = "GPIO"
+            val sidebarElementCamera = "Камера"
+            val sidebarElementAudio = "Аудіо"
         }
     }
     fun refresh() {
